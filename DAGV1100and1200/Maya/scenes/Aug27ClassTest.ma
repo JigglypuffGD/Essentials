@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Aug27ClassTest.ma
-//Last modified: Tue, Sep 02, 2025 08:01:51 PM
+//Last modified: Tue, Sep 02, 2025 08:04:11 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
@@ -11,22 +11,24 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "E63806B3-4F92-05CD-0692-FE917E9006CF";
+fileInfo "UUID" "6A92D4D4-46D1-8C9D-8C78-60BE4A026058";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A137742C-4D6E-0AFA-BBFD-D6957CEFEA24";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 20.646017079725063 7.4132074804190813 0.81371235701717115 ;
-	setAttr ".r" -type "double3" -17.138352729594157 104.19999999998204 0 ;
+	setAttr ".t" -type "double3" 20.99753503805475 7.384489071281708 -5.2929340618118754 ;
+	setAttr ".r" -type "double3" 166.53745171168063 72.985157638165646 179.99999999999994 ;
+	setAttr ".rp" -type "double3" -6.6613381477509392e-16 0 0 ;
+	setAttr ".rpt" -type "double3" 1.0911365567580336e-15 -3.1603284999650028e-17 5.8936743264709023e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4BF1BE77-4411-AEBD-F0C0-64B687C2F8A9";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 22.307169210082627;
+	setAttr ".fl" 34.999999999999979;
+	setAttr ".coi" 22.579111052227027;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.019301532508990693 0.83972975598603394 6.0428418666488337 ;
+	setAttr ".tp" -type "double3" 0 2.1278525740048417 1.132604901571403 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "A904B75B-414B-ECB5-E92C-4488E41A04FD";

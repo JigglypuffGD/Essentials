@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: PottedPlant.ma
-//Last modified: Tue, Oct 07, 2025 01:44:13 PM
+//Last modified: Tue, Oct 07, 2025 01:44:48 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "73514098-4E44-B6B0-E832-3B99492E1D03";
+fileInfo "UUID" "BA42316D-4717-C708-8152-1DA05817E7AE";
 createNode transform -s -n "persp";
 	rename -uid "99148D59-473B-DFD0-FBD5-63BB9DEB27F7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.3346131481749481 4.5745268404893906 9.7821845131309306 ;
-	setAttr ".r" -type "double3" -2.7383527294176311 -1074.9999999998674 -4.9885998181954489e-17 ;
+	setAttr ".t" -type "double3" -2.0771283400709839 4.8845060458189522 9.4642105474761262 ;
+	setAttr ".r" -type "double3" -4.5383527294181185 -1094.9999999998511 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6527528B-4C16-784C-A874-21B2FFF77923";
 	setAttr -k off ".v" no;

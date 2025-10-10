@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Aug27ClassTest.ma
-//Last modified: Fri, Oct 10, 2025 12:41:07 PM
+//Last modified: Fri, Oct 10, 2025 12:41:35 PM
 //Codeset: 1252
 file -rdi 1 -ns "PottedPlant" -rfn "PottedPlantRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/PottedPlant.ma";
@@ -21,12 +21,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "12BDCB3B-465A-992F-4F46-79968EF223F1";
+fileInfo "UUID" "B0FB0D2C-4956-8A1E-A04C-9DBCB012782F";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A137742C-4D6E-0AFA-BBFD-D6957CEFEA24";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.7429484164032409 3.8536739247828811 -16.711823391322856 ;
+	setAttr ".t" -type "double3" -4.7429484164036184 3.8536739247827665 -16.711823391322504 ;
 	setAttr ".r" -type "double3" 167.4672237341963 407.21632817150208 -179.99999999999773 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 6.128189641934733e-16 -2.8865290525976774e-16 5.3607443401650033e-18 ;
@@ -34,7 +34,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4BF1BE77-4411-AEBD-F0C0-64B687C2F8A9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 12.040877191425267;
+	setAttr ".coi" 12.040877191424741;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";

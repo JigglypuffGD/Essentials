@@ -1,6 +1,6 @@
-//Maya ASCII 2025ff03 scene
+//Maya ASCII 2026 scene
 //Name: Aug27ClassTest.ma
-//Last modified: Wed, Oct 15, 2025 03:17:42 PM
+//Last modified: Mon, Oct 20, 2025 08:25:39 PM
 //Codeset: 1252
 file -rdi 1 -ns "PottedPlant" -rfn "PottedPlantRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/PottedPlant.ma";
@@ -11,35 +11,35 @@ file -r -ns "PottedPlant" -dr 1 -rfn "PottedPlantRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/PottedPlant.ma";
 file -r -ns "Urn" -dr 1 -rfn "UrnRN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Urn.ma";
 file -r -ns "NightStand" -dr 1 -rfn "NightStandRN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/NightStand.ma";
-requires maya "2025ff03";
+requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
-		 "mtoa" "5.4.5";
+		 "mtoa" "5.5.3";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2025";
-fileInfo "version" "2025";
-fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
-fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "D7277E13-4BC2-5DBD-53CE-5094404A5C86";
+fileInfo "product" "Maya 2026";
+fileInfo "version" "2026";
+fileInfo "cutIdentifier" "202507081222-4d6919b75c";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
+fileInfo "UUID" "A774E6B2-45F4-10C8-63CC-BB9D72AF74A0";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A137742C-4D6E-0AFA-BBFD-D6957CEFEA24";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 34.752093793158387 15.816156710455569 -53.263732313100036 ;
-	setAttr ".r" -type "double3" 167.4672237341963 407.21632817150208 -179.99999999999773 ;
+	setAttr ".t" -type "double3" 20.091848160800126 10.583216847081477 -2.7498132873746246 ;
+	setAttr ".r" -type "double3" 169.86722373419747 439.61632817149092 -179.99999999998448 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 6.128189641934733e-16 -2.8865290525976774e-16 5.3607443401650033e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4BF1BE77-4411-AEBD-F0C0-64B687C2F8A9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 67.168015692879038;
+	setAttr ".coi" 21.881707459308359;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -13.36946098068135 1.2408267855644226 -8.7281504055090586 ;
+	setAttr ".tp" -type "double3" -1.0957937240600586 6.7335705459117889 1.1326055526733398 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "A904B75B-414B-ECB5-E92C-4488E41A04FD";
@@ -250,6 +250,18 @@ createNode mesh -n "Wall1" -p "|Wall1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape5" -p "|Wall1";
+	rename -uid "D149F849-4329-464A-1777-30BF58E4C4B0";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 2 "f[2]" "f[6]";
@@ -329,6 +341,18 @@ createNode transform -n "Wall2";
 createNode mesh -n "Wall2_Windowed_" -p "Wall2";
 	rename -uid "F1EAD527-4CBE-7769-9F93-95B056E34B34";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape6" -p "Wall2";
+	rename -uid "49D22538-4FD6-926F-2C9E-618BF9D86E07";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 2 "f[0:11]" "f[16:17]";
 	setAttr ".vir" yes;
@@ -8529,6 +8553,18 @@ createNode transform -n "Chair";
 createNode mesh -n "ChairShape" -p "Chair";
 	rename -uid "FB6F0F44-435C-B73D-3EEE-EC9915A13394";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape7" -p "Chair";
+	rename -uid "5F6E4F3D-410B-89CF-4E8F-858ECECB0E71";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:59]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -8753,6 +8789,18 @@ createNode mesh -n "Bookshelf1Shape" -p "Bookshelf1";
 	setAttr ".de" 1;
 createNode mesh -n "polySurfaceShape3" -p "Bookshelf1";
 	rename -uid "54F4EFAC-4E10-2A57-A901-A3BD4DAEFFA0";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".de" 1;
+createNode mesh -n "polySurfaceShape4" -p "Bookshelf1";
+	rename -uid "6C7CF022-4124-6EBB-E2A3-CDB38236FD3B";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:2307]";
@@ -18059,22 +18107,22 @@ createNode transform -n "nurbsCube1";
 	rename -uid "DB1FD3DA-4890-FAFD-BC8A-2CAFFC777847";
 	setAttr ".t" -type "double3" -10.748571098652413 1.3409926728056201 -9.6467384516389316 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4B44E571-4329-E9FB-F145-37B42E0FE4F2";
+	rename -uid "DC9E9523-413C-0747-A392-E2974A9588DE";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D2492D66-4771-4F9A-46EC-53B44D201B15";
+	rename -uid "E6B6C871-4CD5-86B7-84F3-EE946B2F7ACB";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FBEF27BD-48D7-71C0-3B33-45B2EA875376";
+	rename -uid "8FB5629B-41E2-F0EE-80B2-B68CFCA3E96D";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BC347CEF-43A8-BCDB-3A5C-D3BA2D9CE7D6";
+	rename -uid "E4AD5549-45DC-F1A6-2480-49BD03EF9508";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 createNode displayLayer -n "defaultLayer";
 	rename -uid "AA72374C-4C9D-E59E-62AB-4086E90BF216";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CC5D4518-4D99-BB82-15DF-BB827F1C8518";
+	rename -uid "C85AE811-4E27-478A-828E-959BC01DDB09";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "98AD8063-429B-100B-023E-158278FC03A1";
 	setAttr ".g" yes;
@@ -18082,19 +18130,19 @@ createNode script -n "uiConfigurationScriptNode";
 	rename -uid "1EE7098A-43CF-294D-4C4E-91831E0E861D";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
-		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
 		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
-		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
+		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 563\n            -height 394\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -18117,12 +18165,12 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
-		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
+		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
 		+ "            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 563\\n    -height 394\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 563\\n    -height 394\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -18144,23 +18192,11 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	setAttr ".output_mode" 0;
 createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
 	rename -uid "982D38CE-488B-1375-1911-28A95769F42C";
-createNode groupId -n "groupId5";
-	rename -uid "3B096E7A-4DBF-3198-AFFA-9DB002FA36E9";
-	setAttr ".ihi" 0;
 createNode groupId -n "groupId17";
 	rename -uid "E2F60728-4307-C5C9-02BE-00B8695D938B";
 	setAttr ".ihi" 0;
-createNode groupId -n "groupId147";
-	rename -uid "0F09547E-4D62-BD62-7B4D-09A6D0F6AF77";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId148";
-	rename -uid "DBC27C23-487C-8479-CEE3-C49C71612AC0";
-	setAttr ".ihi" 0;
 createNode groupId -n "groupId149";
 	rename -uid "57F23264-4221-B879-B0AC-AC83A9A5861A";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId151";
-	rename -uid "C7710390-482A-7783-AA53-BBB398B279E1";
 	setAttr ".ihi" 0;
 createNode animCurveTL -n "Bookshelf1_translateX";
 	rename -uid "1A3BBE8F-418A-6A23-DFAA-70813B663CBA";
@@ -18221,7 +18257,7 @@ createNode groupId -n "groupId167";
 	setAttr ".ihi" 0;
 createNode reference -n "PottedPlantRN";
 	rename -uid "0162B817-4668-1AFB-6E84-D999D4132CB5";
-	setAttr ".fn[0]" -type "string" "C:/Users/10856644/Desktop/Maya/Essentials/DAGV1100and1200/Maya/scenes/PottedPlant.ma";
+	setAttr ".fn[0]" -type "string" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/PottedPlant.ma";
 	setAttr -s 26 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
@@ -18431,31 +18467,31 @@ createNode reference -n "PottedPlantRN";
 		
 		2 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		3 "PottedPlant:polyTweakUV8.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4.inMesh" 
-		""
-		3 "PottedPlant:polyTweakUV10.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface5|PottedPlant:loftedSurfaceShape5.inMesh" 
-		""
-		3 "PottedPlant:polyTweakUV6.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface7|PottedPlant:loftedSurfaceShape7.inMesh" 
-		""
 		3 "PottedPlant:polyTweakUV13.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface6|PottedPlant:loftedSurfaceShape6.inMesh" 
-		""
-		3 "PottedPlant:polyTweakUV7.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface2|PottedPlant:loftedSurfaceShape2.inMesh" 
-		""
-		3 "PottedPlant:polyTweakUV9.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface1|PottedPlant:loftedSurfaceShape1.inMesh" 
 		""
 		3 "PottedPlant:polyTweakUV11.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface8|PottedPlant:loftedSurfaceShape8.inMesh" 
 		""
+		3 "PottedPlant:polyTweakUV7.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface2|PottedPlant:loftedSurfaceShape2.inMesh" 
+		""
 		3 "PottedPlant:polyTweakUV2.output" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.inMesh" 
 		""
+		3 "PottedPlant:polyTweakUV8.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4.inMesh" 
+		""
 		3 "PottedPlant:polyTweakUV5.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface3|PottedPlant:loftedSurfaceShape3.inMesh" 
+		""
+		3 "PottedPlant:polyTweakUV15.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface10|PottedPlant:loftedSurfaceShape10.inMesh" 
+		""
+		3 "PottedPlant:polyTweakUV10.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface5|PottedPlant:loftedSurfaceShape5.inMesh" 
+		""
+		3 "PottedPlant:polyTweakUV9.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface1|PottedPlant:loftedSurfaceShape1.inMesh" 
+		""
+		3 "PottedPlant:polyTweakUV6.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface7|PottedPlant:loftedSurfaceShape7.inMesh" 
+		""
+		3 "PottedPlant:polyTweakUV4.output" "|PottedPlant:Potted_Plant|PottedPlant:pCylinder1|PottedPlant:pCylinderShape1.inMesh" 
 		""
 		3 "PottedPlant:polyTweakUV12.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface9|PottedPlant:loftedSurfaceShape9.inMesh" 
 		""
 		3 "PottedPlant:polyTweakUV14.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface11|PottedPlant:loftedSurfaceShape11.inMesh" 
-		""
-		3 "PottedPlant:polyTweakUV15.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface10|PottedPlant:loftedSurfaceShape10.inMesh" 
-		""
-		3 "PottedPlant:polyTweakUV4.output" "|PottedPlant:Potted_Plant|PottedPlant:pCylinder1|PottedPlant:pCylinderShape1.inMesh" 
 		""
 		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface1|PottedPlant:loftedSurfaceShape1.inMesh" 
 		"PottedPlantRN.placeHolderList[1]" ""
@@ -18517,7 +18553,7 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode reference -n "UrnRN";
 	rename -uid "DF88DD76-45F1-4A08-6007-DE806F426AEB";
-	setAttr ".fn[0]" -type "string" "C:/Users/10856644/Desktop/Maya/Essentials/DAGV1100and1200/Maya/scenes/Urn.ma";
+	setAttr ".fn[0]" -type "string" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Urn.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"UrnRN"
 		"UrnRN" 0
@@ -18539,7 +18575,7 @@ createNode reference -n "NightStandRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"NightStandRN"
 		"NightStandRN" 0
-		"NightStandRN" 828
+		"NightStandRN" 26
 		2 "|NightStand:group" "translate" " -type \"double3\" 0 0 0"
 		2 "|NightStand:group" "rotatePivot" " -type \"double3\" -13.36946098068134958 1.24082678556442261 -8.72815040550905863"
 		
@@ -18556,63 +18592,9 @@ createNode reference -n "NightStandRN";
 		"scalePivot" " -type \"double3\" -13.44320146107071423 1.24082671541368095 -8.72815161448105314"
 		
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts" " -s 28"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[0]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[1]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[2]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[3]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[4]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[5]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[6]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[7]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[8]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[9]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[10]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[11]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[12]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[13]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[14]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[15]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[16]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[17]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[18]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[19]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[20]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[21]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[22]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[23]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[24]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[25]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[26]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90" 
-		"pnts[27]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
+		"pt[0:27]" (" -s 28 -type \"float3\" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067"
+		+ "000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		)
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92" 
 		"rotatePivot" " -type \"double3\" -12.49511149189176784 1.79490118304624291 -8.74553141559735003"
 		
@@ -18620,23 +18602,8 @@ createNode reference -n "NightStandRN";
 		"scalePivot" " -type \"double3\" -12.49511149189176784 1.79490118304624291 -8.74553141559735003"
 		
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts" " -s 8"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts[0]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts[1]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts[2]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts[3]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts[4]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts[5]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts[6]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92" 
-		"pnts[7]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
+		"pt[0:7]" " -s 8 -type \"float3\" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91" 
 		"rotatePivot" " -type \"double3\" -12.49511149189176784 0.97243335681454202 -8.74553141559735003"
 		
@@ -18644,23 +18611,8 @@ createNode reference -n "NightStandRN";
 		"scalePivot" " -type \"double3\" -12.49511149189176784 0.97243335681454202 -8.74553141559735003"
 		
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts" " -s 8"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts[0]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts[1]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts[2]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts[3]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts[4]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts[5]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts[6]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91" 
-		"pnts[7]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
+		"pt[0:7]" " -s 8 -type \"float3\" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand" 
 		"rotatePivot" " -type \"double3\" -12.3849218674466286 1.78417626895405546 -8.76607132414010515"
 		
@@ -18670,769 +18622,30 @@ createNode reference -n "NightStandRN";
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
 		"pnts" " -s 382"
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[0]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[1]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[2]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[3]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[4]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[5]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[6]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[7]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[8]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[9]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[10]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[11]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[12]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[13]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[14]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[15]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[16]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[17]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[18]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[19]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[20]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[21]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[22]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[23]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[24]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[25]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[26]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[27]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[28]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[29]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[30]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[31]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[32]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[33]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[34]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[35]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[36]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[37]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[38]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[39]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[40]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[41]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[42]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[43]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[44]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[45]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[46]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[47]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[48]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[49]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[50]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[51]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[52]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[53]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[54]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[55]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[56]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[57]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[58]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[59]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[60]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[61]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[62]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[63]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[64]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[65]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[66]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[67]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[68]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[69]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[70]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[71]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[72]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[73]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[74]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[75]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[76]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[77]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[78]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[79]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[80]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[81]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[82]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[83]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[84]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[85]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[86]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[87]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[88]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[89]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[90]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[91]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[92]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[93]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[94]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[95]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[96]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[97]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[98]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[99]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[100]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[101]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[102]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[103]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[104]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[105]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[106]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[107]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[108]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[109]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[110]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[111]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[112]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[113]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[114]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[115]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[116]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[117]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[118]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[119]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[120]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[121]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[122]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[123]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[124]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[125]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[126]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[127]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[128]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[129]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[130]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[131]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[132]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[133]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[134]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[135]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[136]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[137]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[138]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[139]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[140]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[141]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[142]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[143]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[144]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[145]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[146]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[147]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[148]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[149]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[150]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[151]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[152]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[153]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[154]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[155]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[156]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[157]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[158]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[159]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[160]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[161]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[162]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[163]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[164]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[165]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[166]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[167]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[168]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[169]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[170]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[171]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[172]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[173]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[174]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[175]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[176]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[177]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[178]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[179]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[180]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[181]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[182]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[183]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[184]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[185]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[186]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[187]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[188]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[189]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[190]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[191]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[192]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[193]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[194]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[195]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[196]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[197]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[198]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[199]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[200]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[201]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[202]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[203]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[204]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[205]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[206]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[207]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[208]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[209]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[210]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[211]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[212]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[213]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[214]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[215]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[216]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[217]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[218]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[219]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[220]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[221]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[222]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[223]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[224]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[225]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[226]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[227]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[228]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[229]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[230]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[231]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[232]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[233]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[234]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[235]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[236]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[237]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[238]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[239]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[240]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[241]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[242]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[243]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[244]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[245]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[246]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[247]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[248]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[249]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[250]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[251]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[252]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[253]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[254]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[255]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[256]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[257]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[258]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[259]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[260]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[261]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[262]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[263]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[264]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[265]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[266]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[267]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[268]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[269]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[270]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[271]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[272]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[273]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[274]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[275]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[276]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[277]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[278]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[279]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[280]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[281]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[282]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[283]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[284]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[285]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[286]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[287]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[288]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[289]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[290]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[291]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[292]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[293]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[294]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[295]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[296]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[297]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[298]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[299]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[300]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[301]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[302]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[303]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[304]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[305]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[306]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[307]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[308]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[309]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[310]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[311]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[312]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[313]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[314]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[315]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[316]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[317]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[318]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[319]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[320]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[321]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[322]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[323]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[324]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[325]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[326]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[327]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[328]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[329]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[330]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[331]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[332]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[333]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[334]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[335]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[336]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[337]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[338]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[339]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[340]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[341]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[342]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[343]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[344]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[345]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[346]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[347]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[348]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[349]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[350]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[351]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[352]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[353]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[354]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[355]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[356]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[357]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[358]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[359]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[360]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[361]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[362]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[363]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[364]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[365]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[366]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[367]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[368]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[369]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[370]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[371]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[372]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[373]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[374]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[375]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[376]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[377]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[378]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[379]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[380]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
-		"pnts[381]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
+		"pt[0:165]" (" -type \"float3\" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000"
+		+ "001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.0114"
+		+ "84067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999"
+		+ "999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344"
+		+ "02062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.0114840670000000"
+		+ "01 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.01148"
+		+ "4067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344020629999999"
+		+ "99 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		)
+		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
+		"pt[166:331]" (" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344020"
+		+ "62999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 "
+		+ "0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.01148406"
+		+ "7000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 "
+		+ "-0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.3440206"
+		+ "2999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0"
+		+ " -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067"
+		+ "000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		)
+		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape" 
+		"pt[332:381]" (" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344020"
+		+ "62999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 "
+		+ "0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		)
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1" 
 		"rotatePivot" " -type \"double3\" -12.3849218674466286 0.96170844272235456 -8.76607132414010515"
 		
@@ -19442,778 +18655,39 @@ createNode reference -n "NightStandRN";
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
 		"pnts" " -s 382"
 		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[0]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[1]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[2]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[3]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[4]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[5]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[6]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[7]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[8]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[9]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[10]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[11]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[12]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[13]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[14]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[15]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[16]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[17]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[18]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[19]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[20]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[21]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[22]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[23]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[24]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[25]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[26]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[27]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[28]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[29]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[30]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[31]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[32]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[33]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[34]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[35]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[36]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[37]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[38]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[39]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[40]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[41]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[42]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[43]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[44]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[45]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[46]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[47]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[48]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[49]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[50]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[51]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[52]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[53]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[54]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[55]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[56]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[57]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[58]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[59]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[60]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[61]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[62]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[63]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[64]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[65]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[66]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[67]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[68]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[69]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[70]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[71]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[72]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[73]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[74]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[75]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[76]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[77]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[78]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[79]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[80]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[81]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[82]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[83]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[84]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[85]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[86]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[87]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[88]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[89]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[90]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[91]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[92]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[93]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[94]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[95]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[96]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[97]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[98]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[99]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[100]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[101]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[102]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[103]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[104]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[105]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[106]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[107]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[108]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[109]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[110]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[111]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[112]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[113]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[114]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[115]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[116]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[117]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[118]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[119]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[120]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[121]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[122]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[123]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[124]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[125]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[126]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[127]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[128]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[129]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[130]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[131]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[132]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[133]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[134]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[135]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[136]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[137]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[138]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[139]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[140]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[141]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[142]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[143]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[144]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[145]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[146]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[147]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[148]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[149]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[150]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[151]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[152]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[153]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[154]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[155]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[156]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[157]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[158]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[159]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[160]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[161]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[162]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[163]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[164]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[165]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[166]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[167]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[168]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[169]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[170]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[171]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[172]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[173]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[174]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[175]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[176]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[177]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[178]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[179]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[180]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[181]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[182]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[183]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[184]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[185]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[186]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[187]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[188]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[189]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[190]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[191]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[192]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[193]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[194]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[195]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[196]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[197]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[198]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[199]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[200]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[201]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[202]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[203]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[204]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[205]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[206]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[207]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[208]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[209]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[210]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[211]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[212]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[213]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[214]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[215]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[216]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[217]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[218]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[219]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[220]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[221]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[222]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[223]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[224]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[225]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[226]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[227]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[228]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[229]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[230]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[231]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[232]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[233]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[234]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[235]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[236]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[237]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[238]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[239]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[240]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[241]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[242]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[243]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[244]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[245]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[246]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[247]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[248]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[249]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[250]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[251]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[252]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[253]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[254]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[255]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[256]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[257]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[258]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[259]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[260]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[261]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[262]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[263]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[264]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[265]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[266]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[267]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[268]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[269]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[270]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[271]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[272]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[273]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[274]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[275]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[276]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[277]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[278]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[279]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[280]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[281]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[282]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[283]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[284]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[285]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[286]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[287]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[288]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[289]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[290]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[291]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[292]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[293]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[294]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[295]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[296]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[297]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[298]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[299]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[300]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[301]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[302]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[303]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[304]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[305]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[306]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[307]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[308]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[309]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[310]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[311]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[312]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[313]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[314]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[315]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[316]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[317]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[318]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[319]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[320]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[321]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[322]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[323]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[324]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[325]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[326]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[327]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[328]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[329]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[330]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[331]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[332]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[333]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[334]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[335]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[336]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[337]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[338]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[339]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[340]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[341]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[342]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[343]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[344]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[345]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[346]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[347]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[348]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[349]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[350]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[351]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[352]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[353]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[354]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[355]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[356]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[357]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[358]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[359]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[360]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[361]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[362]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[363]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[364]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[365]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[366]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[367]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[368]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[369]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[370]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[371]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[372]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[373]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[374]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[375]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[376]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[377]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[378]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[379]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[380]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999"
-		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
-		"pnts[381]" " -type \"float3\" -0.011484067000000001 0 -0.34402062999999999";
+		"pt[0:165]" (" -type \"float3\" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000"
+		+ "001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.0114"
+		+ "84067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999"
+		+ "999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344"
+		+ "02062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.0114840670000000"
+		+ "01 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.01148"
+		+ "4067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344020629999999"
+		+ "99 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		)
+		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
+		"pt[166:331]" (" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344020"
+		+ "62999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 "
+		+ "0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.01148406"
+		+ "7000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 "
+		+ "-0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.3440206"
+		+ "2999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0"
+		+ " -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067"
+		+ "000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		)
+		2 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1" 
+		"pt[332:381]" (" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344020"
+		+ "62999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 "
+		+ "0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
+		);
 lockNode -l 1 ;
 createNode reference -n "_UNKNOWN_REF_NODE_";
 	rename -uid "BAF5C73F-4CF4-0B11-9825-91BF71778CB6";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"_UNKNOWN_REF_NODE_"
 		"_UNKNOWN_REF_NODE_" 2
-		2 ":openPBR_shader1" "bc" " -type \"float3\" 0.40000001000000002 0.40000001000000002 0.40000001000000002"
+		2 ":openPBR_shader1" "baseColor" " -type \"float3\" 0.40000001000000002 0.40000001000000002 0.40000001000000002"
 		
-		2 ":openPBR_shader1" "sr" " 0.5";
+		2 ":openPBR_shader1" "specularRoughness" " 0.5";
 createNode polyMapDel -n "polyMapDel1";
 	rename -uid "4DA2E564-4ECC-FD75-B991-3FB1C1CA0738";
 	setAttr ".uopa" yes;
@@ -20319,6 +18793,171 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -100.62928531686015 769.87036319477488 ;
 	setAttr ".tgi[0].vh" -type "double2" 3049.3705895133908 2225.9678663102682 ;
+createNode polyMapDel -n "polyMapDel2";
+	rename -uid "B174CE52-454D-5EF3-B36E-E09340DFE1F7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyPlanarProj -n "polyPlanarProj2";
+	rename -uid "298BB20B-4B70-80DD-B0D7-B3B8A2D4A7B3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:2307]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.8973529181998074 0 0.59250579072527465 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -13.06580924987793 4.6641313061118126 -2.5461397171020508 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 9.3389196395874023 9.2586285620927811 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polyMapCut -n "polyMapCut1";
+	rename -uid "FFA6B0EB-44B4-809F-BC1A-91A1764A5D00";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 19 "e[198:199]" "e[204:205]" "e[224:226]" "e[247]" "e[249:250]" "e[261]" "e[263]" "e[266]" "e[273]" "e[292:294]" "e[315]" "e[317:318]" "e[329]" "e[331]" "e[341]" "e[360:362]" "e[383]" "e[397]" "e[399]";
+createNode polyNormal -n "polyNormal1";
+	rename -uid "957E9EA6-4625-BEEA-FDE4-BFBE41A53591";
+	setAttr ".ics" -type "componentList" 1 "f[0:2307]";
+	setAttr ".nm" 2;
+createNode polySplitEdge -n "polySplitEdge1";
+	rename -uid "23916719-4675-4F80-8982-25AB3AF63DF1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 300 "e[4:5]" "e[7:8]" "e[24:25]" "e[42:43]" "e[48]" "e[60]" "e[102:103]" "e[105:106]" "e[122:123]" "e[140:141]" "e[146]" "e[158]" "e[404:405]" "e[407:408]" "e[424:425]" "e[442:443]" "e[448]" "e[460]" "e[502:503]" "e[505:506]" "e[522:523]" "e[540:541]" "e[546]" "e[558]" "e[600:601]" "e[603:604]" "e[620:621]" "e[638:639]" "e[644]" "e[656]" "e[698:699]" "e[701:702]" "e[718:719]" "e[736:737]" "e[742]" "e[754]" "e[796:797]" "e[799:800]" "e[816:817]" "e[834:835]" "e[840]" "e[852]" "e[894:895]" "e[897:898]" "e[914:915]" "e[932:933]" "e[938]" "e[950]" "e[992:993]" "e[995:996]" "e[1012:1013]" "e[1030:1031]" "e[1036]" "e[1048]" "e[1090:1091]" "e[1093:1094]" "e[1110:1111]" "e[1128:1129]" "e[1134]" "e[1146]" "e[1188:1189]" "e[1191:1192]" "e[1208:1209]" "e[1226:1227]" "e[1232]" "e[1244]" "e[1286:1287]" "e[1289:1290]" "e[1306:1307]" "e[1324:1325]" "e[1330]" "e[1342]" "e[1384:1385]" "e[1387:1388]" "e[1404:1405]" "e[1422:1423]" "e[1428]" "e[1440]" "e[1482:1483]" "e[1485:1486]" "e[1502:1503]" "e[1520:1521]" "e[1526]" "e[1538]" "e[1580:1581]" "e[1583:1584]" "e[1600:1601]" "e[1618:1619]" "e[1624]" "e[1636]" "e[1678:1679]" "e[1681:1682]" "e[1698:1699]" "e[1716:1717]" "e[1722]" "e[1734]" "e[1776:1777]" "e[1779:1780]" "e[1796:1797]" "e[1814:1815]" "e[1820]" "e[1832]" "e[1874:1875]" "e[1877:1878]" "e[1894:1895]" "e[1912:1913]" "e[1918]" "e[1930]" "e[1972:1973]" "e[1975:1976]" "e[1992:1993]" "e[2010:2011]" "e[2016]" "e[2028]" "e[2070:2071]" "e[2073:2074]" "e[2090:2091]" "e[2108:2109]" "e[2114]" "e[2126]" "e[2168:2169]" "e[2171:2172]" "e[2188:2189]" "e[2206:2207]" "e[2212]" "e[2224]" "e[2266:2267]" "e[2269:2270]" "e[2286:2287]" "e[2304:2305]" "e[2310]" "e[2322]" "e[2364:2365]" "e[2367:2368]" "e[2384:2385]" "e[2402:2403]" "e[2408]" "e[2420]" "e[2462:2463]" "e[2465:2466]" "e[2482:2483]" "e[2500:2501]" "e[2506]" "e[2518]" "e[2560:2561]" "e[2563:2564]" "e[2580:2581]" "e[2598:2599]" "e[2604]" "e[2616]" "e[2658:2659]" "e[2661:2662]" "e[2678:2679]" "e[2696:2697]" "e[2702]" "e[2714]" "e[2756:2757]" "e[2759:2760]" "e[2776:2777]" "e[2794:2795]" "e[2800]" "e[2812]" "e[2866:2867]" "e[2869:2870]" "e[2886:2887]" "e[2904:2905]" "e[2910]" "e[2922]" "e[2964:2965]" "e[2967:2968]" "e[2984:2985]" "e[3002:3003]" "e[3008]" "e[3020]" "e[3062:3063]" "e[3065:3066]" "e[3082:3083]" "e[3100:3101]" "e[3106]" "e[3118]" "e[3160:3161]" "e[3163:3164]" "e[3180:3181]" "e[3198:3199]" "e[3204]" "e[3216]" "e[3258:3259]" "e[3261:3262]" "e[3278:3279]" "e[3296:3297]" "e[3302]" "e[3314]" "e[3356:3357]" "e[3359:3360]" "e[3376:3377]" "e[3394:3395]" "e[3400]" "e[3412]" "e[3454:3455]" "e[3457:3458]" "e[3474:3475]" "e[3492:3493]" "e[3498]" "e[3510]" "e[3552:3553]" "e[3555:3556]" "e[3572:3573]" "e[3590:3591]" "e[3596]" "e[3608]" "e[3650:3651]" "e[3653:3654]" "e[3670:3671]" "e[3688:3689]" "e[3694]" "e[3706]" "e[3748:3749]" "e[3751:3752]" "e[3768:3769]" "e[3786:3787]" "e[3792]" "e[3804]" "e[3846:3847]" "e[3849:3850]" "e[3866:3867]" "e[3884:3885]" "e[3890]" "e[3902]" "e[3944:3945]" "e[3947:3948]" "e[3964:3965]" "e[3982:3983]" "e[3988]" "e[4000]" "e[4042:4043]" "e[4045:4046]" "e[4062:4063]" "e[4080:4081]" "e[4086]" "e[4098]" "e[4140:4141]" "e[4143:4144]" "e[4160:4161]" "e[4178:4179]" "e[4184]" "e[4196]" "e[4238:4239]" "e[4241:4242]" "e[4258:4259]" "e[4276:4277]" "e[4282]" "e[4294]" "e[4336:4337]" "e[4339:4340]" "e[4356:4357]" "e[4374:4375]" "e[4380]" "e[4392]" "e[4434:4435]" "e[4437:4438]" "e[4454:4455]" "e[4472:4473]" "e[4478]" "e[4490]" "e[4532:4533]" "e[4535:4536]" "e[4552:4553]" "e[4570:4571]" "e[4576]" "e[4588]" "e[4630:4631]" "e[4633:4634]" "e[4650:4651]" "e[4668:4669]" "e[4674]" "e[4686]" "e[4728:4729]" "e[4731:4732]" "e[4748:4749]" "e[4766:4767]" "e[4772]" "e[4784]" "e[4826:4827]" "e[4829:4830]" "e[4846:4847]" "e[4864:4865]" "e[4870]" "e[4882]" "e[4924:4925]" "e[4927:4928]" "e[4944:4945]" "e[4962:4963]" "e[4968]" "e[4980]" "e[5022:5023]" "e[5025:5026]" "e[5042:5043]" "e[5060:5061]" "e[5066]" "e[5078]";
+createNode polySplitVert -n "polySplitVert1";
+	rename -uid "5D44714A-418F-9D30-F911-BC84648AD8CF";
+	setAttr ".ics" -type "componentList" 350 "vtx[0:7]" "vtx[9:10]" "vtx[13:14]" "vtx[17:18]" "vtx[21:22]" "vtx[25:26]" "vtx[31:32]" "vtx[56:63]" "vtx[65:66]" "vtx[69:70]" "vtx[73:74]" "vtx[77:78]" "vtx[81:82]" "vtx[87:88]" "vtx[220:227]" "vtx[229:230]" "vtx[233:234]" "vtx[237:238]" "vtx[241:242]" "vtx[245:246]" "vtx[251:252]" "vtx[276:283]" "vtx[285:286]" "vtx[289:290]" "vtx[293:294]" "vtx[297:298]" "vtx[301:302]" "vtx[307:308]" "vtx[332:339]" "vtx[341:342]" "vtx[345:346]" "vtx[349:350]" "vtx[353:354]" "vtx[357:358]" "vtx[363:364]" "vtx[388:395]" "vtx[397:398]" "vtx[401:402]" "vtx[405:406]" "vtx[409:410]" "vtx[413:414]" "vtx[419:420]" "vtx[444:451]" "vtx[453:454]" "vtx[457:458]" "vtx[461:462]" "vtx[465:466]" "vtx[469:470]" "vtx[475:476]" "vtx[500:507]" "vtx[509:510]" "vtx[513:514]" "vtx[517:518]" "vtx[521:522]" "vtx[525:526]" "vtx[531:532]" "vtx[556:563]" "vtx[565:566]" "vtx[569:570]" "vtx[573:574]" "vtx[577:578]" "vtx[581:582]" "vtx[587:588]" "vtx[612:619]" "vtx[621:622]" "vtx[625:626]" "vtx[629:630]" "vtx[633:634]" "vtx[637:638]" "vtx[643:644]" "vtx[668:675]" "vtx[677:678]" "vtx[681:682]" "vtx[685:686]" "vtx[689:690]" "vtx[693:694]" "vtx[699:700]" "vtx[724:731]" "vtx[733:734]" "vtx[737:738]" "vtx[741:742]" "vtx[745:746]" "vtx[749:750]" "vtx[755:756]" "vtx[780:787]" "vtx[789:790]" "vtx[793:794]" "vtx[797:798]" "vtx[801:802]" "vtx[805:806]" "vtx[811:812]" "vtx[836:843]" "vtx[845:846]" "vtx[849:850]" "vtx[853:854]" "vtx[857:858]" "vtx[861:862]" "vtx[867:868]" "vtx[892:899]" "vtx[901:902]" "vtx[905:906]" "vtx[909:910]" "vtx[913:914]" "vtx[917:918]" "vtx[923:924]" "vtx[948:955]" "vtx[957:958]" "vtx[961:962]" "vtx[965:966]" "vtx[969:970]" "vtx[973:974]" "vtx[979:980]" "vtx[1004:1011]" "vtx[1013:1014]" "vtx[1017:1018]" "vtx[1021:1022]" "vtx[1025:1026]" "vtx[1029:1030]" "vtx[1035:1036]" "vtx[1060:1067]" "vtx[1069:1070]" "vtx[1073:1074]" "vtx[1077:1078]" "vtx[1081:1082]" "vtx[1085:1086]" "vtx[1091:1092]" "vtx[1116:1123]" "vtx[1125:1126]" "vtx[1129:1130]" "vtx[1133:1134]" "vtx[1137:1138]" "vtx[1141:1142]" "vtx[1147:1148]" "vtx[1172:1179]" "vtx[1181:1182]" "vtx[1185:1186]" "vtx[1189:1190]" "vtx[1193:1194]" "vtx[1197:1198]" "vtx[1203:1204]" "vtx[1228:1235]" "vtx[1237:1238]" "vtx[1241:1242]" "vtx[1245:1246]" "vtx[1249:1250]" "vtx[1253:1254]" "vtx[1259:1260]" "vtx[1284:1291]" "vtx[1293:1294]" "vtx[1297:1298]" "vtx[1301:1302]" "vtx[1305:1306]" "vtx[1309:1310]" "vtx[1315:1316]" "vtx[1340:1347]" "vtx[1349:1350]" "vtx[1353:1354]" "vtx[1357:1358]" "vtx[1361:1362]" "vtx[1365:1366]" "vtx[1371:1372]" "vtx[1396:1403]" "vtx[1405:1406]" "vtx[1409:1410]" "vtx[1413:1414]" "vtx[1417:1418]" "vtx[1421:1422]" "vtx[1427:1428]" "vtx[1452:1459]" "vtx[1461:1462]" "vtx[1465:1466]" "vtx[1469:1470]" "vtx[1473:1474]" "vtx[1477:1478]" "vtx[1483:1484]" "vtx[1508:1515]" "vtx[1517:1518]" "vtx[1521:1522]" "vtx[1525:1526]" "vtx[1529:1530]" "vtx[1533:1534]" "vtx[1539:1540]" "vtx[1564:1571]" "vtx[1573:1574]" "vtx[1577:1578]" "vtx[1581:1582]" "vtx[1585:1586]" "vtx[1589:1590]" "vtx[1595:1596]" "vtx[1628:1635]" "vtx[1637:1638]" "vtx[1641:1642]" "vtx[1645:1646]" "vtx[1649:1650]" "vtx[1653:1654]" "vtx[1659:1660]" "vtx[1684:1691]" "vtx[1693:1694]" "vtx[1697:1698]" "vtx[1701:1702]" "vtx[1705:1706]" "vtx[1709:1710]" "vtx[1715:1716]" "vtx[1740:1747]" "vtx[1749:1750]" "vtx[1753:1754]" "vtx[1757:1758]" "vtx[1761:1762]" "vtx[1765:1766]" "vtx[1771:1772]" "vtx[1796:1803]" "vtx[1805:1806]" "vtx[1809:1810]" "vtx[1813:1814]" "vtx[1817:1818]" "vtx[1821:1822]" "vtx[1827:1828]" "vtx[1852:1859]" "vtx[1861:1862]" "vtx[1865:1866]" "vtx[1869:1870]" "vtx[1873:1874]" "vtx[1877:1878]" "vtx[1883:1884]" "vtx[1908:1915]" "vtx[1917:1918]" "vtx[1921:1922]" "vtx[1925:1926]" "vtx[1929:1930]" "vtx[1933:1934]" "vtx[1939:1940]" "vtx[1964:1971]" "vtx[1973:1974]" "vtx[1977:1978]" "vtx[1981:1982]" "vtx[1985:1986]" "vtx[1989:1990]" "vtx[1995:1996]" "vtx[2020:2027]" "vtx[2029:2030]" "vtx[2033:2034]" "vtx[2037:2038]" "vtx[2041:2042]" "vtx[2045:2046]" "vtx[2051:2052]" "vtx[2076:2083]" "vtx[2085:2086]" "vtx[2089:2090]" "vtx[2093:2094]" "vtx[2097:2098]" "vtx[2101:2102]" "vtx[2107:2108]" "vtx[2132:2139]" "vtx[2141:2142]" "vtx[2145:2146]" "vtx[2149:2150]" "vtx[2153:2154]" "vtx[2157:2158]" "vtx[2163:2164]" "vtx[2188:2195]" "vtx[2197:2198]" "vtx[2201:2202]" "vtx[2205:2206]" "vtx[2209:2210]" "vtx[2213:2214]" "vtx[2219:2220]" "vtx[2244:2251]" "vtx[2253:2254]" "vtx[2257:2258]" "vtx[2261:2262]" "vtx[2265:2266]" "vtx[2269:2270]" "vtx[2275:2276]" "vtx[2300:2307]" "vtx[2309:2310]" "vtx[2313:2314]" "vtx[2317:2318]" "vtx[2321:2322]" "vtx[2325:2326]" "vtx[2331:2332]" "vtx[2356:2363]" "vtx[2365:2366]" "vtx[2369:2370]" "vtx[2373:2374]" "vtx[2377:2378]" "vtx[2381:2382]" "vtx[2387:2388]" "vtx[2412:2419]" "vtx[2421:2422]" "vtx[2425:2426]" "vtx[2429:2430]" "vtx[2433:2434]" "vtx[2437:2438]" "vtx[2443:2444]" "vtx[2468:2475]" "vtx[2477:2478]" "vtx[2481:2482]" "vtx[2485:2486]" "vtx[2489:2490]" "vtx[2493:2494]" "vtx[2499:2500]" "vtx[2524:2531]" "vtx[2533:2534]" "vtx[2537:2538]" "vtx[2541:2542]" "vtx[2545:2546]" "vtx[2549:2550]" "vtx[2555:2556]" "vtx[2580:2587]" "vtx[2589:2590]" "vtx[2593:2594]" "vtx[2597:2598]" "vtx[2601:2602]" "vtx[2605:2606]" "vtx[2611:2612]" "vtx[2636:2643]" "vtx[2645:2646]" "vtx[2649:2650]" "vtx[2653:2654]" "vtx[2657:2658]" "vtx[2661:2662]" "vtx[2667:2668]" "vtx[2692:2699]" "vtx[2701:2702]" "vtx[2705:2706]" "vtx[2709:2710]" "vtx[2713:2714]" "vtx[2717:2718]" "vtx[2723:2724]" "vtx[2748:2755]" "vtx[2757:2758]" "vtx[2761:2762]" "vtx[2765:2766]" "vtx[2769:2770]" "vtx[2773:2774]" "vtx[2779:2780]" "vtx[2804:2811]" "vtx[2813:2814]" "vtx[2817:2818]" "vtx[2821:2822]" "vtx[2825:2826]" "vtx[2829:2830]" "vtx[2835:2836]" "vtx[2860:2867]" "vtx[2869:2870]" "vtx[2873:2874]" "vtx[2877:2878]" "vtx[2881:2882]" "vtx[2885:2886]" "vtx[2891:2892]";
+createNode polyChipOff -n "polyChipOff1";
+	rename -uid "561D68AF-4990-7B30-AFD8-E6BC79C866C1";
+	setAttr ".ics" -type "componentList" 450 "f[6:7]" "f[9:10]" "f[14:15]" "f[17:18]" "f[22]" "f[24:25]" "f[27:28]" "f[30:31]" "f[33]" "f[50:51]" "f[53:54]" "f[58:59]" "f[61:62]" "f[66]" "f[68:69]" "f[71:72]" "f[74:75]" "f[77]" "f[196:197]" "f[199:200]" "f[204:205]" "f[207:208]" "f[212]" "f[214:215]" "f[217:218]" "f[220:221]" "f[223]" "f[240:241]" "f[243:244]" "f[248:249]" "f[251:252]" "f[256]" "f[258:259]" "f[261:262]" "f[264:265]" "f[267]" "f[284:285]" "f[287:288]" "f[292:293]" "f[295:296]" "f[300]" "f[302:303]" "f[305:306]" "f[308:309]" "f[311]" "f[328:329]" "f[331:332]" "f[336:337]" "f[339:340]" "f[344]" "f[346:347]" "f[349:350]" "f[352:353]" "f[355]" "f[372:373]" "f[375:376]" "f[380:381]" "f[383:384]" "f[388]" "f[390:391]" "f[393:394]" "f[396:397]" "f[399]" "f[416:417]" "f[419:420]" "f[424:425]" "f[427:428]" "f[432]" "f[434:435]" "f[437:438]" "f[440:441]" "f[443]" "f[460:461]" "f[463:464]" "f[468:469]" "f[471:472]" "f[476]" "f[478:479]" "f[481:482]" "f[484:485]" "f[487]" "f[504:505]" "f[507:508]" "f[512:513]" "f[515:516]" "f[520]" "f[522:523]" "f[525:526]" "f[528:529]" "f[531]" "f[548:549]" "f[551:552]" "f[556:557]" "f[559:560]" "f[564]" "f[566:567]" "f[569:570]" "f[572:573]" "f[575]" "f[592:593]" "f[595:596]" "f[600:601]" "f[603:604]" "f[608]" "f[610:611]" "f[613:614]" "f[616:617]" "f[619]" "f[636:637]" "f[639:640]" "f[644:645]" "f[647:648]" "f[652]" "f[654:655]" "f[657:658]" "f[660:661]" "f[663]" "f[680:681]" "f[683:684]" "f[688:689]" "f[691:692]" "f[696]" "f[698:699]" "f[701:702]" "f[704:705]" "f[707]" "f[724:725]" "f[727:728]" "f[732:733]" "f[735:736]" "f[740]" "f[742:743]" "f[745:746]" "f[748:749]" "f[751]" "f[768:769]" "f[771:772]" "f[776:777]" "f[779:780]" "f[784]" "f[786:787]" "f[789:790]" "f[792:793]" "f[795]" "f[812:813]" "f[815:816]" "f[820:821]" "f[823:824]" "f[828]" "f[830:831]" "f[833:834]" "f[836:837]" "f[839]" "f[856:857]" "f[859:860]" "f[864:865]" "f[867:868]" "f[872]" "f[874:875]" "f[877:878]" "f[880:881]" "f[883]" "f[900:901]" "f[903:904]" "f[908:909]" "f[911:912]" "f[916]" "f[918:919]" "f[921:922]" "f[924:925]" "f[927]" "f[944:945]" "f[947:948]" "f[952:953]" "f[955:956]" "f[960]" "f[962:963]" "f[965:966]" "f[968:969]" "f[971]" "f[988:989]" "f[991:992]" "f[996:997]" "f[999:1000]" "f[1004]" "f[1006:1007]" "f[1009:1010]" "f[1012:1013]" "f[1015]" "f[1032:1033]" "f[1035:1036]" "f[1040:1041]" "f[1043:1044]" "f[1048]" "f[1050:1051]" "f[1053:1054]" "f[1056:1057]" "f[1059]" "f[1076:1077]" "f[1079:1080]" "f[1084:1085]" "f[1087:1088]" "f[1092]" "f[1094:1095]" "f[1097:1098]" "f[1100:1101]" "f[1103]" "f[1120:1121]" "f[1123:1124]" "f[1128:1129]" "f[1131:1132]" "f[1136]" "f[1138:1139]" "f[1141:1142]" "f[1144:1145]" "f[1147]" "f[1164:1165]" "f[1167:1168]" "f[1172:1173]" "f[1175:1176]" "f[1180]" "f[1182:1183]" "f[1185:1186]" "f[1188:1189]" "f[1191]" "f[1208:1209]" "f[1211:1212]" "f[1216:1217]" "f[1219:1220]" "f[1224]" "f[1226:1227]" "f[1229:1230]" "f[1232:1233]" "f[1235]" "f[1252:1253]" "f[1255:1256]" "f[1260:1261]" "f[1263:1264]" "f[1268]" "f[1270:1271]" "f[1273:1274]" "f[1276:1277]" "f[1279]" "f[1302:1303]" "f[1305:1306]" "f[1310:1311]" "f[1313:1314]" "f[1318]" "f[1320:1321]" "f[1323:1324]" "f[1326:1327]" "f[1329]" "f[1346:1347]" "f[1349:1350]" "f[1354:1355]" "f[1357:1358]" "f[1362]" "f[1364:1365]" "f[1367:1368]" "f[1370:1371]" "f[1373]" "f[1390:1391]" "f[1393:1394]" "f[1398:1399]" "f[1401:1402]" "f[1406]" "f[1408:1409]" "f[1411:1412]" "f[1414:1415]" "f[1417]" "f[1434:1435]" "f[1437:1438]" "f[1442:1443]" "f[1445:1446]" "f[1450]" "f[1452:1453]" "f[1455:1456]" "f[1458:1459]" "f[1461]" "f[1478:1479]" "f[1481:1482]" "f[1486:1487]" "f[1489:1490]" "f[1494]" "f[1496:1497]" "f[1499:1500]" "f[1502:1503]" "f[1505]" "f[1522:1523]" "f[1525:1526]" "f[1530:1531]" "f[1533:1534]" "f[1538]" "f[1540:1541]" "f[1543:1544]" "f[1546:1547]" "f[1549]" "f[1566:1567]" "f[1569:1570]" "f[1574:1575]" "f[1577:1578]" "f[1582]" "f[1584:1585]" "f[1587:1588]" "f[1590:1591]" "f[1593]" "f[1610:1611]" "f[1613:1614]" "f[1618:1619]" "f[1621:1622]" "f[1626]" "f[1628:1629]" "f[1631:1632]" "f[1634:1635]" "f[1637]" "f[1654:1655]" "f[1657:1658]" "f[1662:1663]" "f[1665:1666]" "f[1670]" "f[1672:1673]" "f[1675:1676]" "f[1678:1679]" "f[1681]" "f[1698:1699]" "f[1701:1702]" "f[1706:1707]" "f[1709:1710]" "f[1714]" "f[1716:1717]" "f[1719:1720]" "f[1722:1723]" "f[1725]" "f[1742:1743]" "f[1745:1746]" "f[1750:1751]" "f[1753:1754]" "f[1758]" "f[1760:1761]" "f[1763:1764]" "f[1766:1767]" "f[1769]" "f[1786:1787]" "f[1789:1790]" "f[1794:1795]" "f[1797:1798]" "f[1802]" "f[1804:1805]" "f[1807:1808]" "f[1810:1811]" "f[1813]" "f[1830:1831]" "f[1833:1834]" "f[1838:1839]" "f[1841:1842]" "f[1846]" "f[1848:1849]" "f[1851:1852]" "f[1854:1855]" "f[1857]" "f[1874:1875]" "f[1877:1878]" "f[1882:1883]" "f[1885:1886]" "f[1890]" "f[1892:1893]" "f[1895:1896]" "f[1898:1899]" "f[1901]" "f[1918:1919]" "f[1921:1922]" "f[1926:1927]" "f[1929:1930]" "f[1934]" "f[1936:1937]" "f[1939:1940]" "f[1942:1943]" "f[1945]" "f[1962:1963]" "f[1965:1966]" "f[1970:1971]" "f[1973:1974]" "f[1978]" "f[1980:1981]" "f[1983:1984]" "f[1986:1987]" "f[1989]" "f[2006:2007]" "f[2009:2010]" "f[2014:2015]" "f[2017:2018]" "f[2022]" "f[2024:2025]" "f[2027:2028]" "f[2030:2031]" "f[2033]" "f[2050:2051]" "f[2053:2054]" "f[2058:2059]" "f[2061:2062]" "f[2066]" "f[2068:2069]" "f[2071:2072]" "f[2074:2075]" "f[2077]" "f[2094:2095]" "f[2097:2098]" "f[2102:2103]" "f[2105:2106]" "f[2110]" "f[2112:2113]" "f[2115:2116]" "f[2118:2119]" "f[2121]" "f[2138:2139]" "f[2141:2142]" "f[2146:2147]" "f[2149:2150]" "f[2154]" "f[2156:2157]" "f[2159:2160]" "f[2162:2163]" "f[2165]" "f[2182:2183]" "f[2185:2186]" "f[2190:2191]" "f[2193:2194]" "f[2198]" "f[2200:2201]" "f[2203:2204]" "f[2206:2207]" "f[2209]" "f[2226:2227]" "f[2229:2230]" "f[2234:2235]" "f[2237:2238]" "f[2242]" "f[2244:2245]" "f[2247:2248]" "f[2250:2251]" "f[2253]" "f[2270:2271]" "f[2273:2274]" "f[2278:2279]" "f[2281:2282]" "f[2286]" "f[2288:2289]" "f[2291:2292]" "f[2294:2295]" "f[2297]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.8973529181998074 0 0.59250579072527465 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -1.8973529 0 0.59250581 ;
+	setAttr ".rs" 44683;
+	setAttr ".kft" no;
+	setAttr ".dup" no;
+createNode polyNormal -n "polyNormal2";
+	rename -uid "088C259D-428C-8798-B5F4-8683FD129427";
+	setAttr ".ics" -type "componentList" 1 "f[0:2307]";
+	setAttr ".nm" 2;
+createNode polySplitEdge -n "polySplitEdge2";
+	rename -uid "8DEAA34B-4895-22FA-76A4-948770042AED";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 300 "e[4:5]" "e[7:8]" "e[24:25]" "e[42:43]" "e[48]" "e[60]" "e[102:103]" "e[105:106]" "e[122:123]" "e[140:141]" "e[146]" "e[158]" "e[404:405]" "e[407:408]" "e[424:425]" "e[442:443]" "e[448]" "e[460]" "e[502:503]" "e[505:506]" "e[522:523]" "e[540:541]" "e[546]" "e[558]" "e[600:601]" "e[603:604]" "e[620:621]" "e[638:639]" "e[644]" "e[656]" "e[698:699]" "e[701:702]" "e[718:719]" "e[736:737]" "e[742]" "e[754]" "e[796:797]" "e[799:800]" "e[816:817]" "e[834:835]" "e[840]" "e[852]" "e[894:895]" "e[897:898]" "e[914:915]" "e[932:933]" "e[938]" "e[950]" "e[992:993]" "e[995:996]" "e[1012:1013]" "e[1030:1031]" "e[1036]" "e[1048]" "e[1090:1091]" "e[1093:1094]" "e[1110:1111]" "e[1128:1129]" "e[1134]" "e[1146]" "e[1188:1189]" "e[1191:1192]" "e[1208:1209]" "e[1226:1227]" "e[1232]" "e[1244]" "e[1286:1287]" "e[1289:1290]" "e[1306:1307]" "e[1324:1325]" "e[1330]" "e[1342]" "e[1384:1385]" "e[1387:1388]" "e[1404:1405]" "e[1422:1423]" "e[1428]" "e[1440]" "e[1482:1483]" "e[1485:1486]" "e[1502:1503]" "e[1520:1521]" "e[1526]" "e[1538]" "e[1580:1581]" "e[1583:1584]" "e[1600:1601]" "e[1618:1619]" "e[1624]" "e[1636]" "e[1678:1679]" "e[1681:1682]" "e[1698:1699]" "e[1716:1717]" "e[1722]" "e[1734]" "e[1776:1777]" "e[1779:1780]" "e[1796:1797]" "e[1814:1815]" "e[1820]" "e[1832]" "e[1874:1875]" "e[1877:1878]" "e[1894:1895]" "e[1912:1913]" "e[1918]" "e[1930]" "e[1972:1973]" "e[1975:1976]" "e[1992:1993]" "e[2010:2011]" "e[2016]" "e[2028]" "e[2070:2071]" "e[2073:2074]" "e[2090:2091]" "e[2108:2109]" "e[2114]" "e[2126]" "e[2168:2169]" "e[2171:2172]" "e[2188:2189]" "e[2206:2207]" "e[2212]" "e[2224]" "e[2266:2267]" "e[2269:2270]" "e[2286:2287]" "e[2304:2305]" "e[2310]" "e[2322]" "e[2364:2365]" "e[2367:2368]" "e[2384:2385]" "e[2402:2403]" "e[2408]" "e[2420]" "e[2462:2463]" "e[2465:2466]" "e[2482:2483]" "e[2500:2501]" "e[2506]" "e[2518]" "e[2560:2561]" "e[2563:2564]" "e[2580:2581]" "e[2598:2599]" "e[2604]" "e[2616]" "e[2658:2659]" "e[2661:2662]" "e[2678:2679]" "e[2696:2697]" "e[2702]" "e[2714]" "e[2756:2757]" "e[2759:2760]" "e[2776:2777]" "e[2794:2795]" "e[2800]" "e[2812]" "e[2866:2867]" "e[2869:2870]" "e[2886:2887]" "e[2904:2905]" "e[2910]" "e[2922]" "e[2964:2965]" "e[2967:2968]" "e[2984:2985]" "e[3002:3003]" "e[3008]" "e[3020]" "e[3062:3063]" "e[3065:3066]" "e[3082:3083]" "e[3100:3101]" "e[3106]" "e[3118]" "e[3160:3161]" "e[3163:3164]" "e[3180:3181]" "e[3198:3199]" "e[3204]" "e[3216]" "e[3258:3259]" "e[3261:3262]" "e[3278:3279]" "e[3296:3297]" "e[3302]" "e[3314]" "e[3356:3357]" "e[3359:3360]" "e[3376:3377]" "e[3394:3395]" "e[3400]" "e[3412]" "e[3454:3455]" "e[3457:3458]" "e[3474:3475]" "e[3492:3493]" "e[3498]" "e[3510]" "e[3552:3553]" "e[3555:3556]" "e[3572:3573]" "e[3590:3591]" "e[3596]" "e[3608]" "e[3650:3651]" "e[3653:3654]" "e[3670:3671]" "e[3688:3689]" "e[3694]" "e[3706]" "e[3748:3749]" "e[3751:3752]" "e[3768:3769]" "e[3786:3787]" "e[3792]" "e[3804]" "e[3846:3847]" "e[3849:3850]" "e[3866:3867]" "e[3884:3885]" "e[3890]" "e[3902]" "e[3944:3945]" "e[3947:3948]" "e[3964:3965]" "e[3982:3983]" "e[3988]" "e[4000]" "e[4042:4043]" "e[4045:4046]" "e[4062:4063]" "e[4080:4081]" "e[4086]" "e[4098]" "e[4140:4141]" "e[4143:4144]" "e[4160:4161]" "e[4178:4179]" "e[4184]" "e[4196]" "e[4238:4239]" "e[4241:4242]" "e[4258:4259]" "e[4276:4277]" "e[4282]" "e[4294]" "e[4336:4337]" "e[4339:4340]" "e[4356:4357]" "e[4374:4375]" "e[4380]" "e[4392]" "e[4434:4435]" "e[4437:4438]" "e[4454:4455]" "e[4472:4473]" "e[4478]" "e[4490]" "e[4532:4533]" "e[4535:4536]" "e[4552:4553]" "e[4570:4571]" "e[4576]" "e[4588]" "e[4630:4631]" "e[4633:4634]" "e[4650:4651]" "e[4668:4669]" "e[4674]" "e[4686]" "e[4728:4729]" "e[4731:4732]" "e[4748:4749]" "e[4766:4767]" "e[4772]" "e[4784]" "e[4826:4827]" "e[4829:4830]" "e[4846:4847]" "e[4864:4865]" "e[4870]" "e[4882]" "e[4924:4925]" "e[4927:4928]" "e[4944:4945]" "e[4962:4963]" "e[4968]" "e[4980]" "e[5022:5023]" "e[5025:5026]" "e[5042:5043]" "e[5060:5061]" "e[5066]" "e[5078]";
+createNode polySplitVert -n "polySplitVert2";
+	rename -uid "D1341C01-42EF-58E8-AB3D-1FAC481D6E91";
+	setAttr ".ics" -type "componentList" 350 "vtx[0:7]" "vtx[9:10]" "vtx[13:14]" "vtx[17:18]" "vtx[21:22]" "vtx[25:26]" "vtx[31:32]" "vtx[56:63]" "vtx[65:66]" "vtx[69:70]" "vtx[73:74]" "vtx[77:78]" "vtx[81:82]" "vtx[87:88]" "vtx[220:227]" "vtx[229:230]" "vtx[233:234]" "vtx[237:238]" "vtx[241:242]" "vtx[245:246]" "vtx[251:252]" "vtx[276:283]" "vtx[285:286]" "vtx[289:290]" "vtx[293:294]" "vtx[297:298]" "vtx[301:302]" "vtx[307:308]" "vtx[332:339]" "vtx[341:342]" "vtx[345:346]" "vtx[349:350]" "vtx[353:354]" "vtx[357:358]" "vtx[363:364]" "vtx[388:395]" "vtx[397:398]" "vtx[401:402]" "vtx[405:406]" "vtx[409:410]" "vtx[413:414]" "vtx[419:420]" "vtx[444:451]" "vtx[453:454]" "vtx[457:458]" "vtx[461:462]" "vtx[465:466]" "vtx[469:470]" "vtx[475:476]" "vtx[500:507]" "vtx[509:510]" "vtx[513:514]" "vtx[517:518]" "vtx[521:522]" "vtx[525:526]" "vtx[531:532]" "vtx[556:563]" "vtx[565:566]" "vtx[569:570]" "vtx[573:574]" "vtx[577:578]" "vtx[581:582]" "vtx[587:588]" "vtx[612:619]" "vtx[621:622]" "vtx[625:626]" "vtx[629:630]" "vtx[633:634]" "vtx[637:638]" "vtx[643:644]" "vtx[668:675]" "vtx[677:678]" "vtx[681:682]" "vtx[685:686]" "vtx[689:690]" "vtx[693:694]" "vtx[699:700]" "vtx[724:731]" "vtx[733:734]" "vtx[737:738]" "vtx[741:742]" "vtx[745:746]" "vtx[749:750]" "vtx[755:756]" "vtx[780:787]" "vtx[789:790]" "vtx[793:794]" "vtx[797:798]" "vtx[801:802]" "vtx[805:806]" "vtx[811:812]" "vtx[836:843]" "vtx[845:846]" "vtx[849:850]" "vtx[853:854]" "vtx[857:858]" "vtx[861:862]" "vtx[867:868]" "vtx[892:899]" "vtx[901:902]" "vtx[905:906]" "vtx[909:910]" "vtx[913:914]" "vtx[917:918]" "vtx[923:924]" "vtx[948:955]" "vtx[957:958]" "vtx[961:962]" "vtx[965:966]" "vtx[969:970]" "vtx[973:974]" "vtx[979:980]" "vtx[1004:1011]" "vtx[1013:1014]" "vtx[1017:1018]" "vtx[1021:1022]" "vtx[1025:1026]" "vtx[1029:1030]" "vtx[1035:1036]" "vtx[1060:1067]" "vtx[1069:1070]" "vtx[1073:1074]" "vtx[1077:1078]" "vtx[1081:1082]" "vtx[1085:1086]" "vtx[1091:1092]" "vtx[1116:1123]" "vtx[1125:1126]" "vtx[1129:1130]" "vtx[1133:1134]" "vtx[1137:1138]" "vtx[1141:1142]" "vtx[1147:1148]" "vtx[1172:1179]" "vtx[1181:1182]" "vtx[1185:1186]" "vtx[1189:1190]" "vtx[1193:1194]" "vtx[1197:1198]" "vtx[1203:1204]" "vtx[1228:1235]" "vtx[1237:1238]" "vtx[1241:1242]" "vtx[1245:1246]" "vtx[1249:1250]" "vtx[1253:1254]" "vtx[1259:1260]" "vtx[1284:1291]" "vtx[1293:1294]" "vtx[1297:1298]" "vtx[1301:1302]" "vtx[1305:1306]" "vtx[1309:1310]" "vtx[1315:1316]" "vtx[1340:1347]" "vtx[1349:1350]" "vtx[1353:1354]" "vtx[1357:1358]" "vtx[1361:1362]" "vtx[1365:1366]" "vtx[1371:1372]" "vtx[1396:1403]" "vtx[1405:1406]" "vtx[1409:1410]" "vtx[1413:1414]" "vtx[1417:1418]" "vtx[1421:1422]" "vtx[1427:1428]" "vtx[1452:1459]" "vtx[1461:1462]" "vtx[1465:1466]" "vtx[1469:1470]" "vtx[1473:1474]" "vtx[1477:1478]" "vtx[1483:1484]" "vtx[1508:1515]" "vtx[1517:1518]" "vtx[1521:1522]" "vtx[1525:1526]" "vtx[1529:1530]" "vtx[1533:1534]" "vtx[1539:1540]" "vtx[1564:1571]" "vtx[1573:1574]" "vtx[1577:1578]" "vtx[1581:1582]" "vtx[1585:1586]" "vtx[1589:1590]" "vtx[1595:1596]" "vtx[1628:1635]" "vtx[1637:1638]" "vtx[1641:1642]" "vtx[1645:1646]" "vtx[1649:1650]" "vtx[1653:1654]" "vtx[1659:1660]" "vtx[1684:1691]" "vtx[1693:1694]" "vtx[1697:1698]" "vtx[1701:1702]" "vtx[1705:1706]" "vtx[1709:1710]" "vtx[1715:1716]" "vtx[1740:1747]" "vtx[1749:1750]" "vtx[1753:1754]" "vtx[1757:1758]" "vtx[1761:1762]" "vtx[1765:1766]" "vtx[1771:1772]" "vtx[1796:1803]" "vtx[1805:1806]" "vtx[1809:1810]" "vtx[1813:1814]" "vtx[1817:1818]" "vtx[1821:1822]" "vtx[1827:1828]" "vtx[1852:1859]" "vtx[1861:1862]" "vtx[1865:1866]" "vtx[1869:1870]" "vtx[1873:1874]" "vtx[1877:1878]" "vtx[1883:1884]" "vtx[1908:1915]" "vtx[1917:1918]" "vtx[1921:1922]" "vtx[1925:1926]" "vtx[1929:1930]" "vtx[1933:1934]" "vtx[1939:1940]" "vtx[1964:1971]" "vtx[1973:1974]" "vtx[1977:1978]" "vtx[1981:1982]" "vtx[1985:1986]" "vtx[1989:1990]" "vtx[1995:1996]" "vtx[2020:2027]" "vtx[2029:2030]" "vtx[2033:2034]" "vtx[2037:2038]" "vtx[2041:2042]" "vtx[2045:2046]" "vtx[2051:2052]" "vtx[2076:2083]" "vtx[2085:2086]" "vtx[2089:2090]" "vtx[2093:2094]" "vtx[2097:2098]" "vtx[2101:2102]" "vtx[2107:2108]" "vtx[2132:2139]" "vtx[2141:2142]" "vtx[2145:2146]" "vtx[2149:2150]" "vtx[2153:2154]" "vtx[2157:2158]" "vtx[2163:2164]" "vtx[2188:2195]" "vtx[2197:2198]" "vtx[2201:2202]" "vtx[2205:2206]" "vtx[2209:2210]" "vtx[2213:2214]" "vtx[2219:2220]" "vtx[2244:2251]" "vtx[2253:2254]" "vtx[2257:2258]" "vtx[2261:2262]" "vtx[2265:2266]" "vtx[2269:2270]" "vtx[2275:2276]" "vtx[2300:2307]" "vtx[2309:2310]" "vtx[2313:2314]" "vtx[2317:2318]" "vtx[2321:2322]" "vtx[2325:2326]" "vtx[2331:2332]" "vtx[2356:2363]" "vtx[2365:2366]" "vtx[2369:2370]" "vtx[2373:2374]" "vtx[2377:2378]" "vtx[2381:2382]" "vtx[2387:2388]" "vtx[2412:2419]" "vtx[2421:2422]" "vtx[2425:2426]" "vtx[2429:2430]" "vtx[2433:2434]" "vtx[2437:2438]" "vtx[2443:2444]" "vtx[2468:2475]" "vtx[2477:2478]" "vtx[2481:2482]" "vtx[2485:2486]" "vtx[2489:2490]" "vtx[2493:2494]" "vtx[2499:2500]" "vtx[2524:2531]" "vtx[2533:2534]" "vtx[2537:2538]" "vtx[2541:2542]" "vtx[2545:2546]" "vtx[2549:2550]" "vtx[2555:2556]" "vtx[2580:2587]" "vtx[2589:2590]" "vtx[2593:2594]" "vtx[2597:2598]" "vtx[2601:2602]" "vtx[2605:2606]" "vtx[2611:2612]" "vtx[2636:2643]" "vtx[2645:2646]" "vtx[2649:2650]" "vtx[2653:2654]" "vtx[2657:2658]" "vtx[2661:2662]" "vtx[2667:2668]" "vtx[2692:2699]" "vtx[2701:2702]" "vtx[2705:2706]" "vtx[2709:2710]" "vtx[2713:2714]" "vtx[2717:2718]" "vtx[2723:2724]" "vtx[2748:2755]" "vtx[2757:2758]" "vtx[2761:2762]" "vtx[2765:2766]" "vtx[2769:2770]" "vtx[2773:2774]" "vtx[2779:2780]" "vtx[2804:2811]" "vtx[2813:2814]" "vtx[2817:2818]" "vtx[2821:2822]" "vtx[2825:2826]" "vtx[2829:2830]" "vtx[2835:2836]" "vtx[2860:2867]" "vtx[2869:2870]" "vtx[2873:2874]" "vtx[2877:2878]" "vtx[2881:2882]" "vtx[2885:2886]" "vtx[2891:2892]";
+createNode polyMapCut -n "polyMapCut2";
+	rename -uid "7087CB41-41AF-B667-7957-68B15EBC2C83";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 4 "e[298]" "e[319]" "e[336]" "e[338]";
+createNode polyMapCut -n "polyMapCut3";
+	rename -uid "1B49E96F-4E52-6F7E-19FA-77A9890F8562";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 4 "e[230]" "e[251]" "e[268]" "e[270]";
+createNode polyMapCut -n "polyMapCut4";
+	rename -uid "51C79E45-4E96-7AF8-64BC-F08DD3CC2D01";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 4 "e[162]" "e[183]" "e[200]" "e[202]";
+createNode polyTweakUV -n "polyTweakUV1";
+	rename -uid "41812003-4F0B-9066-88B6-8B9D593A85C9";
+	setAttr ".uopa" yes;
+	setAttr -s 13 ".uvtk";
+	setAttr ".uvtk[216]" -type "float2" 0 0.14589822 ;
+	setAttr ".uvtk[231]" -type "float2" 0 -0.14589822 ;
+	setAttr ".uvtk[252]" -type "float2" 0 0.14589822 ;
+	setAttr ".uvtk[267]" -type "float2" 0 -0.14589822 ;
+	setAttr ".uvtk[288]" -type "float2" 0 0.14589819 ;
+	setAttr ".uvtk[303]" -type "float2" 0 -0.14589819 ;
+	setAttr ".uvtk[8352]" -type "float2" 0 -0.14589819 ;
+	setAttr ".uvtk[8354]" -type "float2" 0 0.14589819 ;
+	setAttr ".uvtk[8356]" -type "float2" 0 -0.14589822 ;
+	setAttr ".uvtk[8358]" -type "float2" 0 0.14589822 ;
+	setAttr ".uvtk[8360]" -type "float2" 0 -0.14589822 ;
+	setAttr ".uvtk[8362]" -type "float2" 0 0.14589822 ;
+createNode polyMapDel -n "polyMapDel3";
+	rename -uid "B688F625-4753-C376-CE3A-76B5C5BCE52C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[11]";
+createNode polyMapDel -n "polyMapDel4";
+	rename -uid "D50B2930-4867-89DC-8DCC-F2B1AD566BDE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyAutoProj -n "polyAutoProj1";
+	rename -uid "755C097A-4DE5-4AA2-9CD1-5A98FAE1F408";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:13]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 30.283309936523438 30.283309936523438 30.283309936523438 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapDel -n "polyMapDel5";
+	rename -uid "A1C4097B-4665-03B9-D8A0-C3B20E561958";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:17]";
+createNode groupId -n "groupId169";
+	rename -uid "725BB8AB-4EDC-E6BE-341E-A080A4BC1977";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts2";
+	rename -uid "9035435B-45BC-A15F-D242-C3A5E37C0AA0";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[0:11]" "f[16:17]";
+createNode polyAutoProj -n "polyAutoProj2";
+	rename -uid "D30B0624-4E03-3AF7-B66C-68B02A28E71B";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[17]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 27.143348693847656 27.143348693847656 27.143348693847656 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapDel -n "polyMapDel6";
+	rename -uid "AC2C2330-4439-DB36-4D7F-4FB186802BCA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode polyAutoProj -n "polyAutoProj3";
+	rename -uid "448066B3-4C77-94FA-E7E6-408D545FB628";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:17]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 27.143348693847656 27.143348693847656 27.143348693847656 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapDel -n "polyMapDel7";
+	rename -uid "4ECDD359-4396-A133-365E-2DBF034F7B94";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:2307]";
+createNode polyAutoProj -n "polyAutoProj4";
+	rename -uid "BF0C3CA2-45AE-4E70-74F1-A08FBC274E54";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:2307]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -1.8973529181998074 0 0.59250579072527465 1;
+	setAttr ".s" -type "double3" 9.3389197587966919 9.3389197587966919 9.3389197587966919 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSewMove -n "polyMapSewMove1";
+	rename -uid "9AB5AAA4-4B84-AADD-B606-7FBC566F2BA6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[160]";
+createNode polyMapDel -n "polyMapDel8";
+	rename -uid "58EFD7CB-4FC8-47C5-2F59-E283E1A397BF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+createNode groupId -n "groupId170";
+	rename -uid "DC55A31A-479D-3D0D-8F5C-C4A839CBB2B9";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts3";
+	rename -uid "792285B2-4550-A5DA-8776-3D9AD15F9414";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:59]";
+createNode polyPlanarProj -n "polyPlanarProj3";
+	rename -uid "A3E02376-4E1B-D8BA-57E1-16BCD8B48547";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:59]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" 1.9133385419845581 2.169179379940033 4.3897697925567627 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 2.5301623344421387 4.3157950639724731 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -20333,7 +18972,7 @@ select -ne :renderPartition;
 	setAttr -s 2 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 5 ".s";
+	setAttr -s 6 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -20341,12 +18980,16 @@ select -ne :defaultRenderingList1;
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
+select -ne :openPBR_shader1;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 42 ".dsm";
+	setAttr -s 39 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 7 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -20365,8 +19008,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "transformGeometry2.og" "PottedPlantRN.phl[1]";
 connectAttr "transformGeometry3.og" "PottedPlantRN.phl[2]";
 connectAttr "transformGeometry4.og" "PottedPlantRN.phl[3]";
@@ -20393,15 +19034,16 @@ connectAttr "PottedPlantRN.phl[23]" "transformGeometry8.ig";
 connectAttr "PottedPlantRN.phl[24]" "transformGeometry9.ig";
 connectAttr "PottedPlantRN.phl[25]" "transformGeometry6.ig";
 connectAttr "PottedPlantRN.phl[26]" "transformGeometry5.ig";
-connectAttr "groupId148.id" "Wall2_Windowed_.iog.og[1].gid";
+connectAttr "polyAutoProj1.out" "|Wall1|Wall1.i";
+connectAttr "groupId169.id" "Wall2_Windowed_.iog.og[1].gid";
 connectAttr ":initialShadingGroup.mwc" "Wall2_Windowed_.iog.og[1].gco";
-connectAttr "groupId5.id" "Wall2_Windowed_.ciog.cog[0].cgid";
+connectAttr "polyAutoProj3.out" "Wall2_Windowed_.i";
 connectAttr "groupId149.id" "TableShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "TableShape.iog.og[0].gco";
 connectAttr "groupId17.id" "TableShape.ciog.cog[0].cgid";
-connectAttr "groupId151.id" "ChairShape.iog.og[0].gid";
+connectAttr "groupId170.id" "ChairShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "ChairShape.iog.og[0].gco";
-connectAttr "groupId147.id" "ChairShape.ciog.cog[0].cgid";
+connectAttr "polyPlanarProj3.out" "ChairShape.i";
 connectAttr "Bookshelf1_translateY.o" "Bookshelf1.ty";
 connectAttr "Bookshelf1_translateZ.o" "Bookshelf1.tz";
 connectAttr "Bookshelf1_translateX.o" "Bookshelf1.tx";
@@ -20414,7 +19056,9 @@ connectAttr "Bookshelf1_scaleY.o" "Bookshelf1.sy";
 connectAttr "Bookshelf1_scaleZ.o" "Bookshelf1.sz";
 connectAttr "groupId168.id" "Bookshelf1Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "Bookshelf1Shape.iog.og[0].gco";
-connectAttr "polyPlanarProj1.out" "Bookshelf1Shape.i";
+connectAttr "polyMapSewMove1.out" "Bookshelf1Shape.i";
+connectAttr "polyTweakUV1.uvtk[0]" "Bookshelf1Shape.uvst[0].uvtw";
+connectAttr "polySplitVert2.out" "polySurfaceShape3.i";
 connectAttr "groupId167.id" "LampShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "LampShape.iog.og[0].gco";
 connectAttr "groupId165.id" "LampShape.ciog.cog[0].cgid";
@@ -20441,18 +19085,50 @@ connectAttr "groupId168.id" "groupParts1.gi";
 connectAttr "polyMapDel1.out" "polyPlanarProj1.ip";
 connectAttr "Bookshelf1Shape.wm" "polyPlanarProj1.mp";
 connectAttr "transformGeometry1.og" "transformGeometry4.ig";
+connectAttr "polyPlanarProj1.out" "polyMapDel2.ip";
+connectAttr "polyMapDel2.out" "polyPlanarProj2.ip";
+connectAttr "Bookshelf1Shape.wm" "polyPlanarProj2.mp";
+connectAttr "polyPlanarProj2.out" "polyMapCut1.ip";
+connectAttr "polyMapCut1.out" "polyNormal1.ip";
+connectAttr "polyNormal1.out" "polySplitEdge1.ip";
+connectAttr "polySplitEdge1.out" "polySplitVert1.ip";
+connectAttr "polySplitVert1.out" "polyChipOff1.ip";
+connectAttr "Bookshelf1Shape.wm" "polyChipOff1.mp";
+connectAttr "polySurfaceShape4.o" "polyNormal2.ip";
+connectAttr "polyNormal2.out" "polySplitEdge2.ip";
+connectAttr "polySplitEdge2.out" "polySplitVert2.ip";
+connectAttr "polyChipOff1.out" "polyMapCut2.ip";
+connectAttr "polyMapCut2.out" "polyMapCut3.ip";
+connectAttr "polyMapCut3.out" "polyMapCut4.ip";
+connectAttr "polyMapCut4.out" "polyTweakUV1.ip";
+connectAttr "polySurfaceShape5.o" "polyMapDel3.ip";
+connectAttr "polyMapDel3.out" "polyMapDel4.ip";
+connectAttr "polyMapDel4.out" "polyAutoProj1.ip";
+connectAttr "|Wall1|Wall1.wm" "polyAutoProj1.mp";
+connectAttr "groupParts2.og" "polyMapDel5.ip";
+connectAttr "polySurfaceShape6.o" "groupParts2.ig";
+connectAttr "groupId169.id" "groupParts2.gi";
+connectAttr "polyMapDel5.out" "polyAutoProj2.ip";
+connectAttr "Wall2_Windowed_.wm" "polyAutoProj2.mp";
+connectAttr "polyAutoProj2.out" "polyMapDel6.ip";
+connectAttr "polyMapDel6.out" "polyAutoProj3.ip";
+connectAttr "Wall2_Windowed_.wm" "polyAutoProj3.mp";
+connectAttr "polyTweakUV1.out" "polyMapDel7.ip";
+connectAttr "polyMapDel7.out" "polyAutoProj4.ip";
+connectAttr "Bookshelf1Shape.wm" "polyAutoProj4.mp";
+connectAttr "polyAutoProj4.out" "polyMapSewMove1.ip";
+connectAttr "groupParts3.og" "polyMapDel8.ip";
+connectAttr "polySurfaceShape7.o" "groupParts3.ig";
+connectAttr "groupId170.id" "groupParts3.gi";
+connectAttr "polyMapDel8.out" "polyPlanarProj3.ip";
+connectAttr "ChairShape.wm" "polyPlanarProj3.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pDiscShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "FloorShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pasted__pasted__pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|Wall1|Wall1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Wall2_Windowed_.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "Wall2_Windowed_.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "TableShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "ChairShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "Wall2_Windowed_.iog.og[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "TableShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "ChairShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "LampShape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "revolvedSurfaceShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "nurbsSphereShape1.iog" ":initialShadingGroup.dsm" -na;
@@ -20464,9 +19140,11 @@ connectAttr "nurbsSphereShape6.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "nurbsSphereShape7.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "LampShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "Bookshelf1Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "groupId148.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Wall2_Windowed_.iog.og[1]" ":initialShadingGroup.dsm" -na;
+connectAttr "ChairShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId149.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId151.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId167.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId168.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId169.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId170.msg" ":initialShadingGroup.gn" -na;
 // End of Aug27ClassTest.ma

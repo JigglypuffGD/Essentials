@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: FirstRoom.ma
-//Last modified: Mon, Oct 27, 2025 03:45:01 PM
+//Last modified: Mon, Oct 27, 2025 03:48:04 PM
 //Codeset: 1252
 file -rdi 1 -ns "PottedPlant" -rfn "PottedPlantRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/PottedPlant.ma";
@@ -22,12 +22,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "893363BD-4A23-7DDF-0314-43A7D6DB52B2";
+fileInfo "UUID" "6E8E3925-4939-17D5-BA48-5BA09757A468";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A137742C-4D6E-0AFA-BBFD-D6957CEFEA24";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.3505798089782752 9.8169499867639409 1.1018150106994482 ;
+	setAttr ".t" -type "double3" 31.215216300243604 58.466978357131836 16.776074004748583 ;
 	setAttr ".r" -type "double3" 121.86722373397829 1201.2163317519683 -180.00000000000381 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 6.128189641934733e-16 -2.8865290525976774e-16 5.3607443401650033e-18 ;
@@ -35,7 +35,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4BF1BE77-4411-AEBD-F0C0-64B687C2F8A9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 7.7129935415071911;
+	setAttr ".coi" 64.997259062463513;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -278,7 +278,7 @@ createNode mesh -n "Wall1" -p "|Wall1";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "f[1]" "f[9:13]";
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".pv" -type "double2" 0.020098403096199036 0.4999980281572789 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.026171729 0.99800813
 		 0.026171749 0.0019920834 0.043675095 0.0019920028 0.043675102 0.99800801 0.048610516

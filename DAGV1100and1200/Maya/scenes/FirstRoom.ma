@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: FirstRoom.ma
-//Last modified: Mon, Oct 27, 2025 05:28:14 PM
+//Last modified: Mon, Oct 27, 2025 05:42:00 PM
 //Codeset: 1252
 file -rdi 1 -ns "PottedPlant" -rfn "PottedPlantRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/PottedPlant.ma";
@@ -22,20 +22,20 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "02DBE55F-4190-F84A-BB1B-D5A4B4111313";
+fileInfo "UUID" "45B7BA9F-41CC-C813-7A84-B89C2BE15F03";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A137742C-4D6E-0AFA-BBFD-D6957CEFEA24";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 21.132827162941311 8.6539421349439625 -5.3754241612200868 ;
-	setAttr ".r" -type "double3" 175.26722373375077 1153.616331751691 -180.00000000005136 ;
+	setAttr ".t" -type "double3" 30.640550299203941 15.712693406852999 -20.566852335074923 ;
+	setAttr ".r" -type "double3" 166.86722373366987 1135.6163317515202 -180.00000000001992 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 6.128189641934733e-16 -2.8865290525976774e-16 5.3607443401650033e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4BF1BE77-4411-AEBD-F0C0-64B687C2F8A9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 23.274798006839138;
+	setAttr ".coi" 39.519319713258767;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -17690,8 +17690,8 @@ createNode mesh -n "Wall2" -p "|Wall2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "A16988D9-4981-0EB3-37C9-7186317F1B5B";
-	setAttr -s 5 ".lnk";
-	setAttr -s 5 ".slnk";
+	setAttr -s 9 ".lnk";
+	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "B094DAB2-441C-416E-0819-5E844F5F0632";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
@@ -17828,7 +17828,7 @@ createNode animCurveTU -n "Bookshelf1_scaleZ";
 createNode reference -n "PottedPlantRN";
 	rename -uid "0162B817-4668-1AFB-6E84-D999D4132CB5";
 	setAttr ".fn[0]" -type "string" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/PottedPlant.ma";
-	setAttr -s 26 ".phl";
+	setAttr -s 39 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -17855,10 +17855,23 @@ createNode reference -n "PottedPlantRN";
 	setAttr ".phl[24]" 0;
 	setAttr ".phl[25]" 0;
 	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PottedPlantRN"
 		"PottedPlantRN" 0
-		"PottedPlantRN" 129
+		"PottedPlantRN" 167
 		2 "|PottedPlant:Potted_Plant" "translate" " -type \"double3\" 0 0 0"
 		2 "|PottedPlant:Potted_Plant" "scale" " -type \"double3\" 1 1 1"
 		2 "|PottedPlant:Potted_Plant" "rotatePivot" " -type \"double3\" -13.72322764736749257 2.66947914873912939 -9.10884723858381307"
@@ -18037,83 +18050,153 @@ createNode reference -n "PottedPlantRN";
 		
 		2 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "PottedPlant:groupParts1" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:79]\""
+		
+		2 "PottedPlant:groupParts1" "groupId" " 106"
+		2 "PottedPlant:groupParts2" "groupId" " 107"
 		3 "PottedPlant:polyTweakUV5.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface3|PottedPlant:loftedSurfaceShape3.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface3|PottedPlant:loftedSurfaceShape3.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV10.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface5|PottedPlant:loftedSurfaceShape5.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface5|PottedPlant:loftedSurfaceShape5.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "PottedPlant:groupId2.message" ":initialShadingGroup.groupNodes" "-na"
 		3 "PottedPlant:polyTweakUV11.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface8|PottedPlant:loftedSurfaceShape8.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface8|PottedPlant:loftedSurfaceShape8.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV12.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface9|PottedPlant:loftedSurfaceShape9.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface9|PottedPlant:loftedSurfaceShape9.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV15.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface10|PottedPlant:loftedSurfaceShape10.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface10|PottedPlant:loftedSurfaceShape10.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "PottedPlant:groupId1.groupId" "PottedPlant:groupParts1.groupId" ""
 		3 "PottedPlant:polyTweakUV2.output" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.inMesh" 
 		""
+		3 "PottedPlant:groupId1.groupId" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "PottedPlant:groupId2.groupId" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.instObjGroups.objectGroups[1].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.instObjGroups.objectGroups[1].objectGrpColor" 
+		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.instObjGroups.objectGroups[1]" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV7.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface2|PottedPlant:loftedSurfaceShape2.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface2|PottedPlant:loftedSurfaceShape2.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV14.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface11|PottedPlant:loftedSurfaceShape11.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface11|PottedPlant:loftedSurfaceShape11.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV9.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface1|PottedPlant:loftedSurfaceShape1.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface1|PottedPlant:loftedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV6.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface7|PottedPlant:loftedSurfaceShape7.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface7|PottedPlant:loftedSurfaceShape7.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV8.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV4.output" "|PottedPlant:Potted_Plant|PottedPlant:pCylinder1|PottedPlant:pCylinderShape1.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:pCylinder1|PottedPlant:pCylinderShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "PottedPlant:polyTweakUV13.output" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface6|PottedPlant:loftedSurfaceShape6.inMesh" 
 		""
+		3 "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface6|PottedPlant:loftedSurfaceShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "PottedPlant:groupId2.groupId" "PottedPlant:groupParts2.groupId" ""
+		3 "PottedPlant:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
 		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface1|PottedPlant:loftedSurfaceShape1.inMesh" 
 		"PottedPlantRN.placeHolderList[1]" ""
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface1|PottedPlant:loftedSurfaceShape1.instObjGroups" 
+		"PottedPlantRN.placeHolderList[2]" ":initialShadingGroup.dsm"
 		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface2|PottedPlant:loftedSurfaceShape2.inMesh" 
-		"PottedPlantRN.placeHolderList[2]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.inMesh" 
 		"PottedPlantRN.placeHolderList[3]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface10|PottedPlant:loftedSurfaceShape10.inMesh" 
-		"PottedPlantRN.placeHolderList[4]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface11|PottedPlant:loftedSurfaceShape11.inMesh" 
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface2|PottedPlant:loftedSurfaceShape2.instObjGroups" 
+		"PottedPlantRN.placeHolderList[4]" ":initialShadingGroup.dsm"
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.instObjGroups" 
 		"PottedPlantRN.placeHolderList[5]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface8|PottedPlant:loftedSurfaceShape8.inMesh" 
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:polySurface1|PottedPlant:polySurfaceShape1.inMesh" 
 		"PottedPlantRN.placeHolderList[6]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface9|PottedPlant:loftedSurfaceShape9.inMesh" 
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface10|PottedPlant:loftedSurfaceShape10.inMesh" 
 		"PottedPlantRN.placeHolderList[7]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface6|PottedPlant:loftedSurfaceShape6.inMesh" 
-		"PottedPlantRN.placeHolderList[8]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface5|PottedPlant:loftedSurfaceShape5.inMesh" 
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface10|PottedPlant:loftedSurfaceShape10.instObjGroups" 
+		"PottedPlantRN.placeHolderList[8]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface11|PottedPlant:loftedSurfaceShape11.inMesh" 
 		"PottedPlantRN.placeHolderList[9]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:pCylinder1|PottedPlant:pCylinderShape1.inMesh" 
-		"PottedPlantRN.placeHolderList[10]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface3|PottedPlant:loftedSurfaceShape3.inMesh" 
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface11|PottedPlant:loftedSurfaceShape11.instObjGroups" 
+		"PottedPlantRN.placeHolderList[10]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface8|PottedPlant:loftedSurfaceShape8.inMesh" 
 		"PottedPlantRN.placeHolderList[11]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface7|PottedPlant:loftedSurfaceShape7.inMesh" 
-		"PottedPlantRN.placeHolderList[12]" ""
-		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4.inMesh" 
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface8|PottedPlant:loftedSurfaceShape8.instObjGroups" 
+		"PottedPlantRN.placeHolderList[12]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface9|PottedPlant:loftedSurfaceShape9.inMesh" 
 		"PottedPlantRN.placeHolderList[13]" ""
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV2.output" "PottedPlantRN.placeHolderList[14]" 
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface9|PottedPlant:loftedSurfaceShape9.instObjGroups" 
+		"PottedPlantRN.placeHolderList[14]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface6|PottedPlant:loftedSurfaceShape6.inMesh" 
+		"PottedPlantRN.placeHolderList[15]" ""
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface6|PottedPlant:loftedSurfaceShape6.instObjGroups" 
+		"PottedPlantRN.placeHolderList[16]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface5|PottedPlant:loftedSurfaceShape5.inMesh" 
+		"PottedPlantRN.placeHolderList[17]" ""
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface5|PottedPlant:loftedSurfaceShape5.instObjGroups" 
+		"PottedPlantRN.placeHolderList[18]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:pCylinder1|PottedPlant:pCylinderShape1.inMesh" 
+		"PottedPlantRN.placeHolderList[19]" ""
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:pCylinder1|PottedPlant:pCylinderShape1.instObjGroups" 
+		"PottedPlantRN.placeHolderList[20]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface3|PottedPlant:loftedSurfaceShape3.inMesh" 
+		"PottedPlantRN.placeHolderList[21]" ""
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface3|PottedPlant:loftedSurfaceShape3.instObjGroups" 
+		"PottedPlantRN.placeHolderList[22]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface7|PottedPlant:loftedSurfaceShape7.inMesh" 
+		"PottedPlantRN.placeHolderList[23]" ""
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface7|PottedPlant:loftedSurfaceShape7.instObjGroups" 
+		"PottedPlantRN.placeHolderList[24]" ":initialShadingGroup.dsm"
+		5 4 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4.inMesh" 
+		"PottedPlantRN.placeHolderList[25]" ""
+		5 3 "PottedPlantRN" "|PottedPlant:Potted_Plant|PottedPlant:loftedSurface4|PottedPlant:loftedSurfaceShape4.instObjGroups" 
+		"PottedPlantRN.placeHolderList[26]" ":initialShadingGroup.dsm"
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV2.output" "PottedPlantRN.placeHolderList[27]" 
 		"PottedPlant:polySurfaceShape1.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV4.output" "PottedPlantRN.placeHolderList[15]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV4.output" "PottedPlantRN.placeHolderList[28]" 
 		"PottedPlant:pCylinderShape1.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV5.output" "PottedPlantRN.placeHolderList[16]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV5.output" "PottedPlantRN.placeHolderList[29]" 
 		"PottedPlant:loftedSurfaceShape3.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV6.output" "PottedPlantRN.placeHolderList[17]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV6.output" "PottedPlantRN.placeHolderList[30]" 
 		"PottedPlant:loftedSurfaceShape7.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV7.output" "PottedPlantRN.placeHolderList[18]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV7.output" "PottedPlantRN.placeHolderList[31]" 
 		"PottedPlant:loftedSurfaceShape2.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV8.output" "PottedPlantRN.placeHolderList[19]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV8.output" "PottedPlantRN.placeHolderList[32]" 
 		"PottedPlant:loftedSurfaceShape4.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV9.output" "PottedPlantRN.placeHolderList[20]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV9.output" "PottedPlantRN.placeHolderList[33]" 
 		"PottedPlant:loftedSurfaceShape1.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV10.output" "PottedPlantRN.placeHolderList[21]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV10.output" "PottedPlantRN.placeHolderList[34]" 
 		"PottedPlant:loftedSurfaceShape5.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV11.output" "PottedPlantRN.placeHolderList[22]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV11.output" "PottedPlantRN.placeHolderList[35]" 
 		"PottedPlant:loftedSurfaceShape8.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV12.output" "PottedPlantRN.placeHolderList[23]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV12.output" "PottedPlantRN.placeHolderList[36]" 
 		"PottedPlant:loftedSurfaceShape9.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV13.output" "PottedPlantRN.placeHolderList[24]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV13.output" "PottedPlantRN.placeHolderList[37]" 
 		"PottedPlant:loftedSurfaceShape6.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV14.output" "PottedPlantRN.placeHolderList[25]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV14.output" "PottedPlantRN.placeHolderList[38]" 
 		"PottedPlant:loftedSurfaceShape11.i"
-		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV15.output" "PottedPlantRN.placeHolderList[26]" 
+		5 3 "PottedPlantRN" "PottedPlant:polyTweakUV15.output" "PottedPlantRN.placeHolderList[39]" 
 		"PottedPlant:loftedSurfaceShape10.i";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -18124,10 +18207,11 @@ createNode reference -n "sharedReferenceNode";
 createNode reference -n "UrnRN";
 	rename -uid "DF88DD76-45F1-4A08-6007-DE806F426AEB";
 	setAttr ".fn[0]" -type "string" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Urn.ma";
+	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"UrnRN"
 		"UrnRN" 0
-		"UrnRN" 8
+		"UrnRN" 10
 		2 "|Urn:group|Urn:pasted__revolvedSurface1" "translate" " -type \"double3\" -13.7462603201749598 -1.97359388834015004 -7.84469151172357293"
 		
 		2 "|Urn:group|Urn:pasted__revolvedSurface1" "translateX" " -av"
@@ -18137,15 +18221,25 @@ createNode reference -n "UrnRN";
 		
 		2 "|Urn:group|Urn:pasted__revolvedSurface1" "scaleX" " -av"
 		2 "|Urn:group|Urn:pasted__revolvedSurface1" "scaleY" " -av"
-		2 "|Urn:group|Urn:pasted__revolvedSurface1" "scaleZ" " -av";
+		2 "|Urn:group|Urn:pasted__revolvedSurface1" "scaleZ" " -av"
+		3 "|Urn:group|Urn:pasted__revolvedSurface1|Urn:pasted__revolvedSurfaceShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "UrnRN" "|Urn:group|Urn:pasted__revolvedSurface1|Urn:pasted__revolvedSurfaceShape1.instObjGroups" 
+		"UrnRN.placeHolderList[1]" ":initialShadingGroup.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "NightStandRN";
 	rename -uid "29CD31A6-4FEB-2DDA-AA80-EA929AB6EC7C";
+	setAttr -s 5 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"NightStandRN"
 		"NightStandRN" 0
-		"NightStandRN" 26
+		"NightStandRN" 36
 		2 "|NightStand:group" "translate" " -type \"double3\" 0 0 0"
 		2 "|NightStand:group" "rotatePivot" " -type \"double3\" -13.36946098068134958 1.24082678556442261 -8.72815040550905863"
 		
@@ -18248,7 +18342,27 @@ createNode reference -n "NightStandRN";
 		"pt[332:381]" (" -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.344020"
 		+ "62999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 "
 		+ "0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999 -0.011484067000000001 0 -0.34402062999999999"
-		);
+		)
+		3 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		5 3 "NightStandRN" "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube90|NightStand:pasted__pCubeShape90.instObjGroups" 
+		"NightStandRN.placeHolderList[1]" ":initialShadingGroup.dsm"
+		5 3 "NightStandRN" "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube92|NightStand:pasted__pCubeShape92.instObjGroups" 
+		"NightStandRN.placeHolderList[2]" ":initialShadingGroup.dsm"
+		5 3 "NightStandRN" "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pCube91|NightStand:pasted__pCubeShape91.instObjGroups" 
+		"NightStandRN.placeHolderList[3]" ":initialShadingGroup.dsm"
+		5 3 "NightStandRN" "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__DeskStand|NightStand:pasted__DeskStandShape.instObjGroups" 
+		"NightStandRN.placeHolderList[4]" ":initialShadingGroup.dsm"
+		5 3 "NightStandRN" "|NightStand:group|NightStand:pasted__DeskStand|NightStand:pasted__pSphere1|NightStand:pasted__pSphereShape1.instObjGroups" 
+		"NightStandRN.placeHolderList[5]" ":initialShadingGroup.dsm";
 lockNode -l 1 ;
 createNode reference -n "_UNKNOWN_REF_NODE_";
 	rename -uid "BAF5C73F-4CF4-0B11-9825-91BF71778CB6";
@@ -40928,7 +41042,7 @@ createNode polyTweakUV -n "polyTweakUV38";
 createNode shadingEngine -n "openPBR_shader1SG";
 	rename -uid "021D1B00-4A4B-CCBE-98CE-0CA0712CAF2E";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
+	setAttr -s 8 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "0B9B157A-4DD4-EFCD-312B-798D4B6AFE1A";
@@ -40938,17 +41052,73 @@ createNode standardSurface -n "standardSurface2";
 createNode shadingEngine -n "standardSurface2SG";
 	rename -uid "6794BD01-4EF8-B154-70C2-4DA70711FB22";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "4F7DC480-4D32-DB2D-C2F0-78887152B291";
-createNode standardSurface -n "standardSurface3";
-	rename -uid "F60128FE-4B3A-5AC5-1D05-E794831C5296";
 createNode shadingEngine -n "standardSurface3SG";
 	rename -uid "B7A5DE7D-4EFD-2C5E-AF9E-EAB03F2F9E4A";
 	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "1A0803FE-40AD-FE8F-212E-0E8E5C11C4CB";
+createNode standardSurface -n "standardSurface4";
+	rename -uid "8093586C-44B0-2675-9829-EFB94A2083F9";
+	setAttr ".bc" -type "float3" 1 1 1 ;
+	setAttr ".sr" 0.15000000596046448;
+	setAttr ".sior" 1.5199999809265137;
+	setAttr ".td" 1;
+	setAttr ".ts" -type "float3" 1 1 1 ;
+	setAttr ".sub" 1;
+	setAttr ".subs" 0.10000000149011612;
+	setAttr ".ctr" 0;
+createNode standardSurface -n "standardSurface5";
+	rename -uid "5D9CD3C4-4059-5B6B-7C20-2EA4FE7CCCBD";
+	setAttr ".bc" -type "float3" 1 0.44220001 0.058699999 ;
+	setAttr ".sr" 0.15000000596046448;
+	setAttr ".sior" 1.5199999809265137;
+	setAttr ".td" 1;
+	setAttr ".ts" -type "float3" 1 1 1 ;
+	setAttr ".sub" 1;
+	setAttr ".subs" 0.10000000149011612;
+	setAttr ".ctr" 0;
+createNode shadingEngine -n "standardSurface5SG";
+	rename -uid "7487F64C-41AA-7B0C-3948-5CAACB22EAA1";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo4";
+	rename -uid "2DC73F84-489F-9C63-6F6A-5AA0EA1FA915";
+createNode standardSurface -n "standardSurface6";
+	rename -uid "0B7DAF0E-4190-19B3-0D75-2CBEBBB4767F";
+	setAttr ".bc" -type "float3" 0.046100002 0.4709 0.147 ;
+createNode shadingEngine -n "standardSurface6SG";
+	rename -uid "8B3782EE-469D-65B6-7329-1A958C6503CB";
+	setAttr ".ihi" 0;
+	setAttr -s 11 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo5";
+	rename -uid "E0B58855-464A-968A-5D14-859B4966541B";
+createNode standardSurface -n "standardSurface7";
+	rename -uid "B5A8B0D9-43DC-93B1-FC03-828F356E4D25";
+	setAttr ".bc" -type "float3" 1 0.86760002 0.47049999 ;
+createNode shadingEngine -n "standardSurface7SG";
+	rename -uid "7E83F1E9-4757-FF65-E03B-01A9E107CA14";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo6";
+	rename -uid "597FFFE2-4E56-52F4-FCD9-35A5CD506667";
+createNode standardSurface -n "standardSurface8";
+	rename -uid "A3467682-455F-FFB7-731B-BE8EEB996FEA";
+	setAttr ".bc" -type "float3" 0.021600001 0.0012000001 0.0012000001 ;
+createNode shadingEngine -n "standardSurface8SG";
+	rename -uid "0695E630-496D-8576-BB5B-24BDE826642D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo7";
+	rename -uid "E8A2322B-46FB-317D-969E-5FB22642310B";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -40960,10 +41130,10 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 5 ".st";
+	setAttr -s 9 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 8 ".s";
+	setAttr -s 12 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -40975,9 +41145,8 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.11538462 0.069397233 0.024866479 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 34 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 2 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
@@ -41000,31 +41169,50 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 connectAttr "transformGeometry2.og" "PottedPlantRN.phl[1]";
-connectAttr "transformGeometry3.og" "PottedPlantRN.phl[2]";
-connectAttr "transformGeometry4.og" "PottedPlantRN.phl[3]";
-connectAttr "transformGeometry5.og" "PottedPlantRN.phl[4]";
-connectAttr "transformGeometry6.og" "PottedPlantRN.phl[5]";
-connectAttr "transformGeometry7.og" "PottedPlantRN.phl[6]";
-connectAttr "transformGeometry8.og" "PottedPlantRN.phl[7]";
-connectAttr "transformGeometry9.og" "PottedPlantRN.phl[8]";
-connectAttr "transformGeometry10.og" "PottedPlantRN.phl[9]";
-connectAttr "transformGeometry11.og" "PottedPlantRN.phl[10]";
-connectAttr "transformGeometry12.og" "PottedPlantRN.phl[11]";
-connectAttr "transformGeometry13.og" "PottedPlantRN.phl[12]";
-connectAttr "transformGeometry14.og" "PottedPlantRN.phl[13]";
-connectAttr "PottedPlantRN.phl[14]" "transformGeometry1.ig";
-connectAttr "PottedPlantRN.phl[15]" "transformGeometry11.ig";
-connectAttr "PottedPlantRN.phl[16]" "transformGeometry12.ig";
-connectAttr "PottedPlantRN.phl[17]" "transformGeometry13.ig";
-connectAttr "PottedPlantRN.phl[18]" "transformGeometry3.ig";
-connectAttr "PottedPlantRN.phl[19]" "transformGeometry14.ig";
-connectAttr "PottedPlantRN.phl[20]" "transformGeometry2.ig";
-connectAttr "PottedPlantRN.phl[21]" "transformGeometry10.ig";
-connectAttr "PottedPlantRN.phl[22]" "transformGeometry7.ig";
-connectAttr "PottedPlantRN.phl[23]" "transformGeometry8.ig";
-connectAttr "PottedPlantRN.phl[24]" "transformGeometry9.ig";
-connectAttr "PottedPlantRN.phl[25]" "transformGeometry6.ig";
-connectAttr "PottedPlantRN.phl[26]" "transformGeometry5.ig";
+connectAttr "PottedPlantRN.phl[2]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry3.og" "PottedPlantRN.phl[3]";
+connectAttr "PottedPlantRN.phl[4]" "standardSurface6SG.dsm" -na;
+connectAttr "PottedPlantRN.phl[5]" "standardSurface2SG.dsm" -na;
+connectAttr "transformGeometry4.og" "PottedPlantRN.phl[6]";
+connectAttr "transformGeometry5.og" "PottedPlantRN.phl[7]";
+connectAttr "PottedPlantRN.phl[8]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry6.og" "PottedPlantRN.phl[9]";
+connectAttr "PottedPlantRN.phl[10]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry7.og" "PottedPlantRN.phl[11]";
+connectAttr "PottedPlantRN.phl[12]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry8.og" "PottedPlantRN.phl[13]";
+connectAttr "PottedPlantRN.phl[14]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry9.og" "PottedPlantRN.phl[15]";
+connectAttr "PottedPlantRN.phl[16]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry10.og" "PottedPlantRN.phl[17]";
+connectAttr "PottedPlantRN.phl[18]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry11.og" "PottedPlantRN.phl[19]";
+connectAttr "PottedPlantRN.phl[20]" "standardSurface2SG.dsm" -na;
+connectAttr "transformGeometry12.og" "PottedPlantRN.phl[21]";
+connectAttr "PottedPlantRN.phl[22]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry13.og" "PottedPlantRN.phl[23]";
+connectAttr "PottedPlantRN.phl[24]" "standardSurface6SG.dsm" -na;
+connectAttr "transformGeometry14.og" "PottedPlantRN.phl[25]";
+connectAttr "PottedPlantRN.phl[26]" "standardSurface6SG.dsm" -na;
+connectAttr "PottedPlantRN.phl[27]" "transformGeometry1.ig";
+connectAttr "PottedPlantRN.phl[28]" "transformGeometry11.ig";
+connectAttr "PottedPlantRN.phl[29]" "transformGeometry12.ig";
+connectAttr "PottedPlantRN.phl[30]" "transformGeometry13.ig";
+connectAttr "PottedPlantRN.phl[31]" "transformGeometry3.ig";
+connectAttr "PottedPlantRN.phl[32]" "transformGeometry14.ig";
+connectAttr "PottedPlantRN.phl[33]" "transformGeometry2.ig";
+connectAttr "PottedPlantRN.phl[34]" "transformGeometry10.ig";
+connectAttr "PottedPlantRN.phl[35]" "transformGeometry7.ig";
+connectAttr "PottedPlantRN.phl[36]" "transformGeometry8.ig";
+connectAttr "PottedPlantRN.phl[37]" "transformGeometry9.ig";
+connectAttr "PottedPlantRN.phl[38]" "transformGeometry6.ig";
+connectAttr "PottedPlantRN.phl[39]" "transformGeometry5.ig";
+connectAttr "UrnRN.phl[1]" "standardSurface3SG.dsm" -na;
+connectAttr "NightStandRN.phl[1]" "openPBR_shader1SG.dsm" -na;
+connectAttr "NightStandRN.phl[2]" "openPBR_shader1SG.dsm" -na;
+connectAttr "NightStandRN.phl[3]" "openPBR_shader1SG.dsm" -na;
+connectAttr "NightStandRN.phl[4]" "openPBR_shader1SG.dsm" -na;
+connectAttr "NightStandRN.phl[5]" "openPBR_shader1SG.dsm" -na;
 connectAttr "polyTweakUV38.out" "FloorShape.i";
 connectAttr "polyTweakUV38.uvtk[0]" "FloorShape.uvst[0].uvtw";
 connectAttr "polyTweakUV13.out" "pasted__pasted__pCubeShape5.i";
@@ -41080,11 +41268,19 @@ relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightS
 relationship "link" ":lightLinker1" "openPBR_shader1SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "standardSurface2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "standardSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "standardSurface5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "standardSurface6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "standardSurface7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "standardSurface8SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "openPBR_shader1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "standardSurface2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "standardSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "standardSurface5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "standardSurface6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "standardSurface7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "standardSurface8SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
@@ -41541,42 +41737,61 @@ connectAttr "polyMapSewMove262.out" "polyTweakUV38.ip";
 connectAttr ":openPBR_shader1.oc" "openPBR_shader1SG.ss";
 connectAttr "TableShape.iog" "openPBR_shader1SG.dsm" -na;
 connectAttr "ChairShape.iog" "openPBR_shader1SG.dsm" -na;
+connectAttr "Bookshelf1Shape.iog" "openPBR_shader1SG.dsm" -na;
 connectAttr "openPBR_shader1SG.msg" "materialInfo1.sg";
 connectAttr ":openPBR_shader1.msg" "materialInfo1.m";
 connectAttr "standardSurface2.oc" "standardSurface2SG.ss";
-connectAttr "Bookshelf1Shape.iog" "standardSurface2SG.dsm" -na;
 connectAttr "standardSurface2SG.msg" "materialInfo2.sg";
 connectAttr "standardSurface2.msg" "materialInfo2.m";
-connectAttr "standardSurface3.oc" "standardSurface3SG.ss";
+connectAttr "standardSurface4.oc" "standardSurface3SG.ss";
 connectAttr "LampShape.iog" "standardSurface3SG.dsm" -na;
+connectAttr "revolvedSurfaceShape2.iog" "standardSurface3SG.dsm" -na;
 connectAttr "standardSurface3SG.msg" "materialInfo3.sg";
-connectAttr "standardSurface3.msg" "materialInfo3.m";
-connectAttr "standardSurface3.msg" "materialInfo3.t" -na;
+connectAttr "standardSurface4.msg" "materialInfo3.m";
+connectAttr "standardSurface5.oc" "standardSurface5SG.ss";
+connectAttr "pasted__pasted__pasted__pSphereShape1.iog" "standardSurface5SG.dsm"
+		 -na;
+connectAttr "pSphereShape1.iog" "standardSurface5SG.dsm" -na;
+connectAttr "|group8|pasted__pSphere1|pasted__pSphereShape1.iog" "standardSurface5SG.dsm"
+		 -na;
+connectAttr "standardSurface5SG.msg" "materialInfo4.sg";
+connectAttr "standardSurface5.msg" "materialInfo4.m";
+connectAttr "standardSurface6.oc" "standardSurface6SG.ss";
+connectAttr "standardSurface6SG.msg" "materialInfo5.sg";
+connectAttr "standardSurface6.msg" "materialInfo5.m";
+connectAttr "standardSurface7.oc" "standardSurface7SG.ss";
+connectAttr "|Wall2|Wall2.iog" "standardSurface7SG.dsm" -na;
+connectAttr "|group12|pasted__Wall1|pasted__Wall1.iog" "standardSurface7SG.dsm" 
+		-na;
+connectAttr "|Wall1|Wall1.iog" "standardSurface7SG.dsm" -na;
+connectAttr "standardSurface7SG.msg" "materialInfo6.sg";
+connectAttr "standardSurface7.msg" "materialInfo6.m";
+connectAttr "standardSurface8.oc" "standardSurface8SG.ss";
+connectAttr "FloorShape.iog" "standardSurface8SG.dsm" -na;
+connectAttr "standardSurface8SG.msg" "materialInfo7.sg";
+connectAttr "standardSurface8.msg" "materialInfo7.m";
 connectAttr "openPBR_shader1SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface3SG.pa" ":renderPartition.st" -na;
+connectAttr "standardSurface5SG.pa" ":renderPartition.st" -na;
+connectAttr "standardSurface6SG.pa" ":renderPartition.st" -na;
+connectAttr "standardSurface7SG.pa" ":renderPartition.st" -na;
+connectAttr "standardSurface8SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface2.msg" ":defaultShaderList1.s" -na;
-connectAttr "standardSurface3.msg" ":defaultShaderList1.s" -na;
+connectAttr "standardSurface4.msg" ":defaultShaderList1.s" -na;
+connectAttr "standardSurface5.msg" ":defaultShaderList1.s" -na;
+connectAttr "standardSurface6.msg" ":defaultShaderList1.s" -na;
+connectAttr "standardSurface7.msg" ":defaultShaderList1.s" -na;
+connectAttr "standardSurface8.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pDiscShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "FloorShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pasted__pasted__pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Wall1|Wall1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "revolvedSurfaceShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "|group6|pasted__pSphere1|pasted__pSphereShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "|group7|pasted__pSphere1|pasted__pSphereShape1.iog" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "|group8|pasted__pSphere1|pasted__pSphereShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "|group9|pasted__group8|pasted__pasted__pSphere1|pasted__pasted__pSphereShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "|group10|pasted__group8|pasted__pasted__pSphere1|pasted__pasted__pSphereShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "pasted__pasted__pasted__pSphereShape1.iog" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "|group12|pasted__Wall1|pasted__Wall1.iog" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "|Wall2|Wall2.iog" ":initialShadingGroup.dsm" -na;
 // End of FirstRoom.ma

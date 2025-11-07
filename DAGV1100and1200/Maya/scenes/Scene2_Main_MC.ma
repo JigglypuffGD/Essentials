@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_Main_MC.ma
-//Last modified: Fri, Nov 07, 2025 04:44:13 PM
+//Last modified: Fri, Nov 07, 2025 04:46:54 PM
 //Codeset: 1252
 file -rdi 1 -ns "Asset1" -rfn "Asset1RN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Asset1.ma";
 file -rdi 1 -ns "Asset2" -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Asset2.ma";
@@ -15,20 +15,20 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "6D04BA4E-4AB5-C53E-3CBA-BEA3A7F92F96";
+fileInfo "UUID" "346FC0FF-4D2C-2400-9A2B-BD8602C5AFBB";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "1959677E-4857-D77E-13E2-A688338A226A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 56.426842576182246 44.7431978897379 84.915247939853998 ;
-	setAttr ".r" -type "double3" -11.138352729573098 33.541496200787527 4.769958934914331e-16 ;
+	setAttr ".t" -type "double3" 72.105826322843967 29.645125749998329 74.681274147175202 ;
+	setAttr ".r" -type "double3" -2.7383527295731365 43.941496200787626 0 ;
 	setAttr ".rp" -type "double3" 7.1054273576010019e-15 8.8817841970012523e-16 2.8421709430404007e-14 ;
 	setAttr ".rpt" -type "double3" 1.2481704558696926e-14 9.4541499169058138e-15 -8.1857010299813059e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1D1745AF-4ADF-1DE1-8875-73A5320A559B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 103.83554012120419;
+	setAttr ".coi" 103.83554012117716;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -673,7 +673,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode reference -n "Asset1RN";
 	rename -uid "5206159C-4578-9390-0173-39AE39D4CF1D";
-	setAttr -s 10 ".phl";
+	setAttr -s 11 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -684,10 +684,11 @@ createNode reference -n "Asset1RN";
 	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
 	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Asset1RN"
 		"Asset1RN" 0
-		"Asset1RN" 29
+		"Asset1RN" 30
 		0 "|Asset1:pCube10" "|LongBookshelf" "-s -r "
 		0 "|Asset1:pCube9" "|LongBookshelf" "-s -r "
 		0 "|Asset1:pCylinder1" "|LongBookshelf" "-s -r "
@@ -734,7 +735,9 @@ createNode reference -n "Asset1RN";
 		"Asset1:standardSurface1SG.dsm"
 		5 0 "Asset1RN" "|LongBookshelf|Asset1:pCube10|Asset1:pCubeShape10.instObjGroups" 
 		"Asset1:standardSurface1SG.dagSetMembers" "Asset1RN.placeHolderList[9]" "Asset1RN.placeHolderList[10]" 
-		"Asset1:standardSurface1SG.dsm";
+		"Asset1:standardSurface1SG.dsm"
+		5 1 "Asset1RN" "Asset1:file1.message" "Asset1RN.placeHolderList[11]" 
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "_UNKNOWN_REF_NODE_";
@@ -787,13 +790,18 @@ createNode polyCube -n "polyCube7";
 	setAttr ".cuv" 4;
 createNode reference -n "Asset2RN";
 	rename -uid "762B8147-4283-4DE5-4128-64B90737D142";
+	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Asset2RN"
 		"Asset2RN" 0
-		"Asset2RN" 2
+		"Asset2RN" 4
 		2 "|Asset2:group1" "translate" " -type \"double3\" 27.22492404462652615 0.21092442696765423 -14.65327850483329364"
 		
-		2 "|Asset2:group1" "scale" " -type \"double3\" 2.62329984393943461 2.62329984393943461 2.62329984393943461";
+		2 "|Asset2:group1" "scale" " -type \"double3\" 2.62329984393943461 2.62329984393943461 2.62329984393943461"
+		
+		3 "Asset2:file1.message" "Asset2:materialInfo1.texture" "-na"
+		5 2 "Asset2RN" "Asset2:materialInfo1.texture" "Asset2RN.placeHolderList[1]" 
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -852,6 +860,7 @@ connectAttr "Asset1RN.phl[3]" "Asset1RN.phl[4]";
 connectAttr "Asset1RN.phl[5]" "Asset1RN.phl[6]";
 connectAttr "Asset1RN.phl[7]" "Asset1RN.phl[8]";
 connectAttr "Asset1RN.phl[9]" "Asset1RN.phl[10]";
+connectAttr "Asset1RN.phl[11]" "Asset2RN.phl[1]";
 connectAttr "polyCube1.out" "pCubeShape1.i";
 connectAttr "polyCube2.out" "pCubeShape4.i";
 connectAttr "polyCube3.out" "pCubeShape6.i";

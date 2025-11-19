@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Asset4.ma
-//Last modified: Wed, Nov 19, 2025 03:01:48 PM
+//Last modified: Wed, Nov 19, 2025 03:04:30 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,13 +11,13 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26100)";
-fileInfo "UUID" "4F068F47-476C-90E6-3B4C-05A6648AC71A";
+fileInfo "UUID" "AEA56B16-4743-DF3B-5787-17A82263A7ED";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "588B1250-4D2A-AB81-3B0F-34A13EFC4987";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.8777793846411619 11.974352986711841 -10.213930648975916 ;
-	setAttr ".r" -type "double3" -44.138352729597969 151.39999999999836 0 ;
+	setAttr ".t" -type "double3" 6.8080702472818331 10.598840631957414 6.6092019091684104 ;
+	setAttr ".r" -type "double3" -36.338352729519428 37.399999999974582 2.0018228512201944e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "806C108C-4791-B83B-0E1B-ABA90B9F4BDC";
 	setAttr -k off ".v" no;
@@ -86,17 +86,27 @@ createNode transform -n "group";
 createNode transform -n "pasted__pCube16" -p "group";
 	rename -uid "F6CE91E7-4E04-D64F-A571-408A44C9C45B";
 	setAttr ".t" -type "double3" -20.281856235645023 27.434857493082106 -21.124011277507414 ;
-	setAttr ".s" -type "double3" 1.3452370613547993 4.6986609110242759 4.1714072836594758 ;
+	setAttr ".s" -type "double3" 1.3452370613547993 4.0582814613770521 3.8930886814306462 ;
 createNode mesh -n "pasted__pCubeShape16" -p "pasted__pCube16";
 	rename -uid "B39EC891-447C-4ADE-7ECA-DEB9A24A2E7A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 10 ".pt";
+	setAttr ".pt[9]" -type "float3" 1.8626451e-09 0 0 ;
+	setAttr ".pt[10]" -type "float3" 1.8626451e-09 0 0 ;
+	setAttr ".pt[13]" -type "float3" -1.8626451e-09 0 0 ;
+	setAttr ".pt[14]" -type "float3" -1.8626451e-09 0 0 ;
+	setAttr ".pt[18]" -type "float3" -1.8626451e-09 0 0 ;
+	setAttr ".pt[19]" -type "float3" 1.8626451e-09 0 0 ;
+	setAttr ".pt[22]" -type "float3" 1.8626451e-09 0 0 ;
+	setAttr ".pt[23]" -type "float3" -1.8626451e-09 0 0 ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "8F1BAC97-41B2-393B-F942-4EB3DA9A15F0";
 	setAttr -s 2 ".lnk";
@@ -214,6 +224,30 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "A3A96170-4898-C88B-3340-B39A11ED00E7";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode polyExtrudeFace -n "polyExtrudeFace1";
+	rename -uid "3DD45072-447B-4C32-B671-6CB481787ADB";
+	setAttr ".ics" -type "componentList" 10 "f[1]" "f[3]" "f[6]" "f[8]" "f[10]" "f[12]" "f[15]" "f[17]" "f[19]" "f[21]";
+	setAttr ".ix" -type "matrix" 1.3452370613547993 0 0 0 0 4.0582814613770521 0 0 0 0 3.8930886814306462 0
+		 0.32715125830536707 2.7496797755155598 -1.8674882431767834 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.32715127 2.7496798 -1.8674883 ;
+	setAttr ".rs" 48842;
+	setAttr ".lt" -type "double3" 0 6.9388939039072284e-18 0.14921039379885936 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.34546727237203256 0.72053904482703368 -3.8140325838921063 ;
+	setAttr ".cbx" -type "double3" 0.99976978898276669 4.7788205062040863 0.079056097538539705 ;
+createNode polyExtrudeFace -n "polyExtrudeFace2";
+	rename -uid "980486F1-4043-C15E-6F2B-BEAB302A48BA";
+	setAttr ".ics" -type "componentList" 6 "f[2]" "f[7]" "f[29]" "f[32]" "f[40]" "f[44]";
+	setAttr ".ix" -type "matrix" 1.3452370613547993 0 0 0 0 4.0582814613770521 0 0 0 0 3.8930886814306462 0
+		 0.32715125830536707 2.7496797755155598 -1.8674882431767834 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.3271513 2.7496796 -3.8140323 ;
+	setAttr ".rs" 59651;
+	setAttr ".lt" -type "double3" 0 2.614891790882192e-17 0.21352211859801384 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -0.34546719218965538 0.57132867009474264 -3.8140323518459387 ;
+	setAttr ".cbx" -type "double3" 0.99976978898276669 4.9280303971515274 -3.8140323518459387 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -257,7 +291,7 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-connectAttr "polySplitRing3.out" "pasted__pCubeShape16.i";
+connectAttr "polyExtrudeFace2.out" "pasted__pCubeShape16.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -276,6 +310,10 @@ connectAttr "polySplitRing1.out" "polySplitRing2.ip";
 connectAttr "pasted__pCubeShape16.wm" "polySplitRing2.mp";
 connectAttr "polySplitRing2.out" "polySplitRing3.ip";
 connectAttr "pasted__pCubeShape16.wm" "polySplitRing3.mp";
+connectAttr "polySplitRing3.out" "polyExtrudeFace1.ip";
+connectAttr "pasted__pCubeShape16.wm" "polyExtrudeFace1.mp";
+connectAttr "polyExtrudeFace1.out" "polyExtrudeFace2.ip";
+connectAttr "pasted__pCubeShape16.wm" "polyExtrudeFace2.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pasted__pCubeShape16.iog" ":initialShadingGroup.dsm" -na;
 // End of Asset4.ma

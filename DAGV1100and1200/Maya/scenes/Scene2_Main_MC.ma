@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_Main_MC.ma
-//Last modified: Mon, Nov 24, 2025 05:26:03 PM
+//Last modified: Mon, Nov 24, 2025 05:36:16 PM
 //Codeset: 1252
 file -rdi 1 -ns "Asset1" -rfn "Asset1RN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Asset1.ma";
 file -rdi 1 -ns "Asset2" -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Asset2.ma";
@@ -19,24 +19,24 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "D3B4A81C-4527-EFC1-13E3-42827FBE0E86";
+fileInfo "UUID" "1FE76DF0-489E-D78E-0D07-D2A9B8C6AACB";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "1959677E-4857-D77E-13E2-A688338A226A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -18.346968457069501 26.350097437528774 101.71492988076824 ;
-	setAttr ".r" -type "double3" -3.3383527295779518 3.1414962007981311 6.2213700751384383e-17 ;
+	setAttr ".t" -type "double3" 69.16483509098822 29.580232960307356 46.251388207571964 ;
+	setAttr ".r" -type "double3" 1.4616472704125214 41.941496200801751 0 ;
 	setAttr ".rp" -type "double3" 7.1054273576010019e-15 8.8817841970012523e-16 2.8421709430404007e-14 ;
 	setAttr ".rpt" -type "double3" 1.2481704558696926e-14 9.4541499169058138e-15 -8.1857010299813059e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1D1745AF-4ADF-1DE1-8875-73A5320A559B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 117.8360072550262;
+	setAttr ".coi" 92.096319259502835;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -24.793657236650148 19.488237425067091 -15.744338322110281 ;
+	setAttr ".tp" -type "double3" 7.630313571756238 31.929406574588903 -22.230113425185607 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "F2C57D46-48FF-FEC6-529F-C3896E0CC642";
@@ -92,7 +92,8 @@ createNode transform -n "Walls_Floor";
 	rename -uid "ECFE31C2-4F33-3F68-98E2-BCBFB73C1940";
 createNode transform -n "pCube1" -p "Walls_Floor";
 	rename -uid "E8BC27B0-41F9-188F-277A-20ABA7F241BC";
-	setAttr ".s" -type "double3" 85.974326819460941 -0.46587012079992846 56.579211252048005 ;
+	setAttr ".t" -type "double3" 4.4737295305415543 0 0 ;
+	setAttr ".s" -type "double3" 94.752115438773458 -0.46587012079992846 56.579211252048005 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
 	rename -uid "A027966E-4CE4-AEDC-24B5-D6AA6468805F";
 	setAttr -k off ".v";
@@ -157,9 +158,9 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube3" -p "Walls_Floor";
 	rename -uid "0F421B4C-4394-ED67-7877-BCA2CC3AB2E4";
-	setAttr ".t" -type "double3" 0.26836335695798064 24.688948354665062 -27.912651114244309 ;
+	setAttr ".t" -type "double3" 3.8071605894660223 24.688948354665062 -27.912651114244309 ;
 	setAttr ".r" -type "double3" 90 0 90 ;
-	setAttr ".s" -type "double3" 49.825472124295864 -0.46587012079992846 85.974326819460941 ;
+	setAttr ".s" -type "double3" 49.825472124295864 -0.46587012079992846 96.185700575401682 ;
 createNode mesh -n "pCubeShape3" -p "pCube3";
 	rename -uid "33924A5B-4025-349B-E3EA-739196621A93";
 	setAttr -k off ".v";
@@ -463,7 +464,7 @@ createNode mesh -n "pCubeShape11" -p "pCube11";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube13";
 	rename -uid "F979C7C1-45E6-4F5D-4A3C-9986E95E3C89";
-	setAttr ".t" -type "double3" 34.82654401626575 10.04345481888733 -18.91258660515205 ;
+	setAttr ".t" -type "double3" 40.515092853733734 10.04345481888733 -18.912586605152029 ;
 	setAttr ".s" -type "double3" 4.7458057661987212 1 3.8252059782521939 ;
 createNode mesh -n "pCubeShape13" -p "pCube13";
 	rename -uid "BA60CE51-4427-6EE4-C4D2-5CB5560CDA4D";
@@ -477,7 +478,7 @@ createNode mesh -n "pCubeShape13" -p "pCube13";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pCube14";
 	rename -uid "280F0D4B-44BF-20E9-FBD3-72B467ABAF9C";
-	setAttr ".t" -type "double3" 34.827747120355987 11.018881438076008 -18.917660659415905 ;
+	setAttr ".t" -type "double3" 40.362830343909238 11.018881438076008 -17.605242439259776 ;
 	setAttr ".r" -type "double3" 0 -13.339011795890613 0 ;
 	setAttr ".s" -type "double3" 4.7458057661987212 1 3.8252059782521939 ;
 createNode mesh -n "pCubeShape14" -p "pCube14";
@@ -529,7 +530,7 @@ createNode mesh -n "pCubeShape14" -p "pCube14";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube15";
 	rename -uid "04D094B3-4516-4329-AC6F-B9877ACC272C";
-	setAttr ".t" -type "double3" 35.047676972625659 11.81491240417802 -18.879506168061752 ;
+	setAttr ".t" -type "double3" 40.652506826559751 11.81491240417802 -17.907153256456198 ;
 	setAttr ".r" -type "double3" 0 -9.8419902617152371 0 ;
 	setAttr ".s" -type "double3" 4.7458057661987212 1 3.8252059782521939 ;
 createNode mesh -n "pCubeShape15" -p "pCube15";
@@ -780,7 +781,7 @@ createNode reference -n "Asset2RN";
 		"Asset2RN"
 		"Asset2RN" 0
 		"Asset2RN" 4
-		2 "|Asset2:group1" "translate" " -type \"double3\" 27.22492404462652615 0.21092442696765423 -14.65327850483329364"
+		2 "|Asset2:group1" "translate" " -type \"double3\" 32.91347288209455257 0.21092442696765423 -14.65327850483328298"
 		
 		2 "|Asset2:group1" "scale" " -type \"double3\" 2.62329984393943461 2.62329984393943461 2.62329984393943461"
 		
@@ -794,12 +795,14 @@ createNode reference -n "Asset3RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Asset3RN"
 		"Asset3RN" 0
-		"Asset3RN" 4
-		2 "|Asset3:Potion1" "translate" " -type \"double3\" 26.07099933543814174 8.07899003398342686 -24.16383467278469155"
+		"Asset3RN" 5
+		2 "|Asset3:polySurface1" "translate" " -type \"double3\" 5.68854883746800333 0 0"
+		
+		2 "|Asset3:Potion1" "translate" " -type \"double3\" 31.75954817290616461 8.07899003398342686 -24.16383467278467023"
 		
 		2 "|Asset3:Potion1" "scale" " -type \"double3\" 2.79606460362670228 2.79606460362670228 2.79606460362670228"
 		
-		2 "|Asset3:Potion2" "translate" " -type \"double3\" 21.6841500629110584 8.66899761996756979 -34.5723733409423275"
+		2 "|Asset3:Potion2" "translate" " -type \"double3\" 27.37269890037906706 8.66899761996756979 -34.57237334094235592"
 		
 		2 "|Asset3:Potion2" "scale" " -type \"double3\" 2.71525190065153366 2.71525190065153366 2.71525190065153366";
 	setAttr ".ptag" -type "string" "";
@@ -814,7 +817,7 @@ createNode reference -n "Asset5RN";
 		"Asset5RN" 0
 		"Asset5RN" 3
 		2 "|Asset5:Bookshelf2" "visibility" " 1"
-		2 "|Asset5:Bookshelf2" "translate" " -type \"double3\" -35.23689810944522094 0.047600180854285162 -22.32472213293715058"
+		2 "|Asset5:Bookshelf2" "translate" " -type \"double3\" -33.90229921293099835 0.047600180854285093 -22.32472213293715058"
 		
 		2 "|Asset5:Bookshelf2" "scale" " -type \"double3\" 10.31881184022248732 10.31881184022248732 10.31881184022248732";
 	setAttr ".ptag" -type "string" "";

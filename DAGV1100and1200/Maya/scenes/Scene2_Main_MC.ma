@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_Main_MC.ma
-//Last modified: Fri, Dec 05, 2025 10:09:57 PM
+//Last modified: Fri, Dec 12, 2025 10:15:45 AM
 //Codeset: 1252
 file -rdi 1 -ns "Asset1" -rfn "Asset1RN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Asset1.ma";
 file -rdi 1 -ns "Asset2" -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Asset2.ma";
@@ -19,19 +19,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "B5822D3E-4C19-59C8-10ED-C991BAB39870";
+fileInfo "UUID" "1FCB7967-475D-C63C-94BC-BA8572C76A9A";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "1959677E-4857-D77E-13E2-A688338A226A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 161.0621954864271 99.103010804280615 199.31139968008412 ;
-	setAttr ".r" -type "double3" -19.800000000001056 28.400000000000411 9.0392765348856154e-16 ;
+	setAttr ".t" -type "double3" 154.7094953712629 79.944141751510045 92.649237151340657 ;
+	setAttr ".r" -type "double3" -24.000000000000242 45.199999999999584 -2.2568835265802792e-15 ;
 	setAttr ".rpt" -type "double3" -5.7724082617883498e-15 -1.23841102188632e-15 1.2568549656049248e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1D1745AF-4ADF-1DE1-8875-73A5320A559B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 261.84765656397099;
+	setAttr ".coi" 170.9677815771721;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -91,11 +91,25 @@ createNode transform -n "Walls_Floor";
 	rename -uid "ECFE31C2-4F33-3F68-98E2-BCBFB73C1940";
 createNode transform -n "pCube1" -p "Walls_Floor";
 	rename -uid "E8BC27B0-41F9-188F-277A-20ABA7F241BC";
+	setAttr ".t" -type "double3" 0 0 -7.5326760774367223 ;
+	setAttr ".s" -type "double3" 1 1 0.72029830139266493 ;
 	setAttr ".rp" -type "double3" 4.4737295305415543 0 0 ;
 	setAttr ".sp" -type "double3" 4.4737295305415543 0 0 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
 	rename -uid "A027966E-4CE4-AEDC-24B5-D6AA6468805F";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.29573206603527069 0.68210125563200563 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape3" -p "pCube1";
+	rename -uid "E9465FC6-40D3-E469-9D78-D0BA90CD3F58";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -111,6 +125,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -143,11 +158,25 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube2" -p "Walls_Floor";
 	rename -uid "23DDD081-4C6A-6857-6B3F-57BE91D4350D";
+	setAttr ".t" -type "double3" 0 0 -7.5326760774367223 ;
+	setAttr ".s" -type "double3" 1 1 0.72029830139266493 ;
 	setAttr ".rp" -type "double3" -42.55553617906903 24.688948354665062 -6.7821785280567093e-29 ;
 	setAttr ".sp" -type "double3" -42.55553617906903 24.688948354665062 -6.7821785280567093e-29 ;
 createNode mesh -n "pCubeShape2" -p "pCube2";
 	rename -uid "576F4062-4490-D4E8-ECC7-F595032CBE39";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.0019298344850540161 0.26549485058058053 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape5" -p "pCube2";
+	rename -uid "D7596D72-4834-90F4-32BD-86B6C130FA70";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -205,6 +234,18 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" -0.0024070888757705688 0.45595142536330968 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape4" -p "pCube3";
+	rename -uid "07A372B7-4A27-5E9C-0080-919C2D4D1F22";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
@@ -218,6 +259,7 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.4375 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -255,165 +297,6 @@ createNode transform -n "LongBookshelf";
 	rename -uid "583E8A10-4C40-A0C3-367D-D48F33FCC651";
 	setAttr ".t" -type "double3" -26.615496570888389 0.41121343580207237 -22.446968591360516 ;
 	setAttr ".s" -type "double3" 10.162813069084022 10.162813069084022 10.162813069084022 ;
-createNode transform -n "pCube4";
-	rename -uid "3692ACCE-453D-6057-9F62-D684A16A48B7";
-	setAttr ".rp" -type "double3" -41.125266294553697 4.9966557207157898 12.479187800158726 ;
-	setAttr ".sp" -type "double3" -41.125266294553697 4.9966557207157898 12.479187800158726 ;
-createNode mesh -n "pCubeShape4" -p "pCube4";
-	rename -uid "CF49650A-4D88-C137-DB1E-178B7688D033";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -42.76686096 0.053718567 25.69396591 -39.4836731 0.053718567 25.69396591
-		 -42.76686096 9.93959332 25.69396591 -39.4836731 9.93959332 25.69396591 -42.76686096 9.93959332 -0.73559093
-		 -39.4836731 9.93959332 -0.73559093 -42.76686096 0.053718567 -0.73559093 -39.4836731 0.053718567 -0.73559093;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube5";
-	rename -uid "47CADBF9-412F-319E-C16B-5FBADBC1B412";
-	setAttr ".rp" -type "double3" -41.125266294553697 13.464275244431192 12.479187800158726 ;
-	setAttr ".sp" -type "double3" -41.125266294553697 13.464275244431192 12.479187800158726 ;
-createNode mesh -n "pCubeShape5" -p "pCube5";
-	rename -uid "66695614-431B-5B9B-B555-6D82A6144F1F";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  -42.266861 10.466777 26.373762 
-		-39.983673 10.466777 26.373762 -42.266861 16.461773 26.373762 -39.983673 16.461773 
-		26.373762 -42.266861 16.461773 -1.4153869 -39.983673 16.461773 -1.4153869 -42.266861 
-		10.466777 -1.4153869 -39.983673 10.466777 -1.4153869;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube6";
-	rename -uid "9ABD22B0-41F1-EDFC-33ED-FBBA48ADA7E2";
-	setAttr ".rp" -type "double3" -42.024759261794287 28.189502262184323 12.241308881787225 ;
-	setAttr ".sp" -type "double3" -42.024759261794287 28.189502262184323 12.241308881787225 ;
-createNode mesh -n "pCubeShape6" -p "pCube6";
-	rename -uid "01DA8D94-435E-6010-67F3-04B049F2A4F4";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -42.35451889 18.12253952 21.14053345 -41.69499588 18.12253952 21.14053345
-		 -42.35451889 38.25646591 21.14053345 -41.69499588 38.25646591 21.14053345 -42.35451889 38.25646591 3.34208584
-		 -41.69499588 38.25646591 3.34208584 -42.35451889 18.12253952 3.34208584 -41.69499588 18.12253952 3.34208584;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Asset4:group";
 	rename -uid "99FBF15D-45E1-1AD7-7F43-2A89E8029257";
 	setAttr ".t" -type "double3" 20.60900749395039 -24.685177717566546 19.25652303433063 ;
@@ -82247,20 +82130,20 @@ createNode mesh -n "polySurfaceShape2" -p "pasted__pCube222";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "38064BD2-4C47-DE6C-886C-66A5979784C1";
+	rename -uid "B4AC8AF6-4546-93C6-C61E-1F8A614F35DB";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "1E90B507-41C9-4724-F981-8AA58E44D5FF";
+	rename -uid "64DBAC8C-4FCC-8370-7DE8-FAA522E3D410";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A5C1629E-4214-65F9-517E-06B7424F2B0E";
+	rename -uid "C15A58F6-4C2A-86E3-859D-3185AE12AE5B";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AA468875-4FB8-79E2-7EEF-14AD94C4662B";
+	rename -uid "A9F818D6-4704-C296-129F-78930DDB755E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "DAF0CE1C-4638-A00E-CDF5-27A47C6FDECD";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AD58280D-406D-889C-8398-98A6936ABC31";
+	rename -uid "428C5D40-4522-3B22-2550-BB86E9E39F66";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5CD3D77E-47DD-9CBB-B5CB-33A424FD0A80";
 	setAttr ".g" yes;
@@ -82504,14 +82387,14 @@ createNode reference -n "Asset2RN";
 		
 		2 "|Asset2:group1|Asset2:pCylinder2|Asset2:pCylinderShape2" "uvSet[0].uvSetName" 
 		" -type \"string\" \"map1\""
-		3 "Asset2:file1.message" "Asset2:materialInfo1.texture" "-na"
-		3 "Asset2:polyTweakUV58.output" "|Asset2:group1|Asset2:pCylinder2|Asset2:pCylinderShape2.inMesh" 
-		""
 		3 "Asset2:polyTweakUV2.output" "|Asset2:group1|Asset2:pasted__pCube12|Asset2:pasted__pCubeShape12.inMesh" 
 		""
+		3 "Asset2:polyTweakUV56.output" "|Asset2:group1|Asset2:pCylinder4|Asset2:pCylinderShape4.inMesh" 
+		""
+		3 "Asset2:file1.message" "Asset2:materialInfo1.texture" "-na"
 		3 "Asset2:polyTweakUV59.output" "|Asset2:group1|Asset2:pCylinder1|Asset2:pCylinderShape1.inMesh" 
 		""
-		3 "Asset2:polyTweakUV56.output" "|Asset2:group1|Asset2:pCylinder4|Asset2:pCylinderShape4.inMesh" 
+		3 "Asset2:polyTweakUV58.output" "|Asset2:group1|Asset2:pCylinder2|Asset2:pCylinderShape2.inMesh" 
 		""
 		3 "Asset2:polyTweakUV57.output" "|Asset2:group1|Asset2:pCylinder3|Asset2:pCylinderShape3.inMesh" 
 		""
@@ -82623,15 +82506,15 @@ createNode reference -n "Asset3RN";
 		" -type \"string\" \"map1\""
 		3 "Asset3:polyTweakUV1.output" "|Asset3:Potion1|Asset3:pSphere1|Asset3:pSphereShape1.inMesh" 
 		""
-		3 "Asset3:polyTweakUV15.output" "|Asset3:Potion2|Asset3:pCylinder4|Asset3:pCylinderShape4.inMesh" 
-		""
 		3 "Asset3:polyTweakUV5.output" "|Asset3:Potion1|Asset3:pCylinder2|Asset3:pCylinderShape2.inMesh" 
 		""
-		3 "Asset3:polyTweakUV16.output" "|Asset3:Potion2|Asset3:pCylinder3|Asset3:pCylinderShape3.inMesh" 
+		3 "Asset3:polyTweakUV15.output" "|Asset3:Potion2|Asset3:pCylinder4|Asset3:pCylinderShape4.inMesh" 
 		""
 		3 "Asset3:polyTweakUV10.output" "|Asset3:Potion1|Asset3:pCylinder1|Asset3:pCylinderShape1.inMesh" 
 		""
 		3 "Asset3:polyTweakUV12.output" "|Asset3:Potion2|Asset3:pCone1|Asset3:pConeShape1.inMesh" 
+		""
+		3 "Asset3:polyTweakUV16.output" "|Asset3:Potion2|Asset3:pCylinder3|Asset3:pCylinderShape3.inMesh" 
 		""
 		5 4 "Asset3RN" "|Asset3:Potion1|Asset3:pCylinder2|Asset3:pCylinderShape2.inMesh" 
 		"Asset3RN.placeHolderList[1]" ""
@@ -82877,7 +82760,7 @@ createNode reference -n "Asset5RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Asset5RN"
 		"Asset5RN" 0
-		"Asset5RN" 598
+		"Asset5RN" 247
 		2 "|Asset5:Bookshelf2" "visibility" " 1"
 		2 "|Asset5:Bookshelf2" "translate" " -type \"double3\" -33.90229921293099835 0.047600180854285093 -22.32472213293715058"
 		
@@ -82897,742 +82780,51 @@ createNode reference -n "Asset5RN";
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCube14" "scalePivot" " -type \"double3\" 4.02595109411462904 2.33435968162514484 -0.070335086509897962"
 		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts" " -s 89"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[0]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[1]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[2]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[3]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[4]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[5]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[6]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[7]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[8]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[9]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[10]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[11]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[12]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[13]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[14]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[15]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[16]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[17]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[18]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[19]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[20]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[21]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[22]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[23]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[24]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[25]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[26]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[27]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[28]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[29]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[30]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[31]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[32]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[33]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[34]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[35]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[36]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[37]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[38]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[39]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[40]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[41]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[42]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[43]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[44]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[45]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[46]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[47]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[48]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[49]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[50]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[51]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[52]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[53]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[54]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[55]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[56]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[57]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[58]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[59]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[60]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[61]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[62]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[63]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[64]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[65]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[66]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[67]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[68]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[69]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[70]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[71]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[72]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[73]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[74]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[75]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[76]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[77]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[78]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[79]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[80]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[81]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[82]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[83]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[84]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[85]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[86]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[87]" " -type \"float3\" 0 2.31616709999999992 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pnts[88]" " -type \"float3\" 0 2.31616709999999992 0"
-		
+		2 "|Asset5:Bookshelf2|Asset5:pCube14|Asset5:pCubeShape14" "pt[0:88]" (" -s 89 -type \"float3\" 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999"
+		+ "992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.316167"
+		+ "09999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0 0 2.31616709999999992 0"
+		)
 		2 "|Asset5:Bookshelf2|Asset5:pCylinder3" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCylinder3" "rotatePivot" " -type \"double3\" 2.85949938687056582 1.56532978653989407 0.35713915749342712"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCylinder3" "scalePivot" " -type \"double3\" 2.85949938687056582 1.56532978653989407 0.35713915749342712"
 		
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts" " -s 42"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[0]" 
-		" -type \"float3\" 1.96226539999999994 1.121152 0.64866816999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[1]" 
-		" -type \"float3\" 2.09626650000000003 1.121152 0.91166024999999995"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[2]" 
-		" -type \"float3\" 2.30497839999999998 1.121152 1.12037209999999998"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[3]" 
-		" -type \"float3\" 2.56797049999999993 1.121152 1.25437310000000002"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[4]" 
-		" -type \"float3\" 2.85949950000000008 1.121152 1.3005468"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[5]" 
-		" -type \"float3\" 3.15102860000000007 1.121152 1.25437310000000002"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[6]" 
-		" -type \"float3\" 3.4140204999999999 1.121152 1.12037180000000003"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[7]" 
-		" -type \"float3\" 3.62273220000000018 1.121152 0.91166013000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[8]" 
-		" -type \"float3\" 3.75673289999999982 1.121152 0.64866805000000005"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[9]" 
-		" -type \"float3\" 3.802907 1.121152 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[10]" 
-		" -type \"float3\" 3.75673289999999982 1.121152 0.065610260000000004"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[11]" 
-		" -type \"float3\" 3.62273220000000018 1.121152 -0.19738173000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[12]" 
-		" -type \"float3\" 3.4140204999999999 1.121152 -0.40609336000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[13]" 
-		" -type \"float3\" 3.15102819999999983 1.121152 -0.54009443999999995"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[14]" 
-		" -type \"float3\" 2.85949950000000008 1.121152 -0.58626807000000003"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[15]" 
-		" -type \"float3\" 2.56797079999999989 1.121152 -0.54009437999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[16]" 
-		" -type \"float3\" 2.3049786000000001 1.121152 -0.40609329999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[17]" 
-		" -type \"float3\" 2.09626720000000022 1.121152 -0.19738168"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[18]" 
-		" -type \"float3\" 1.962266 1.121152 0.065610319"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[19]" 
-		" -type \"float3\" 1.91609239999999992 1.121152 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[20]" 
-		" -type \"float3\" 1.96226539999999994 2.00950739999999994 0.64866816999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[21]" 
-		" -type \"float3\" 2.09626650000000003 2.00950739999999994 0.91166024999999995"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[22]" 
-		" -type \"float3\" 2.30497839999999998 2.00950739999999994 1.12037209999999998"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[23]" 
-		" -type \"float3\" 2.56797049999999993 2.00950739999999994 1.25437310000000002"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[24]" 
-		" -type \"float3\" 2.85949950000000008 2.00950739999999994 1.3005468"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[25]" 
-		" -type \"float3\" 3.15102860000000007 2.00950739999999994 1.25437310000000002"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[26]" 
-		" -type \"float3\" 3.4140204999999999 2.00950739999999994 1.12037180000000003"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[27]" 
-		" -type \"float3\" 3.62273220000000018 2.00950739999999994 0.91166013000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[28]" 
-		" -type \"float3\" 3.75673289999999982 2.00950739999999994 0.64866805000000005"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[29]" 
-		" -type \"float3\" 3.802907 2.00950739999999994 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[30]" 
-		" -type \"float3\" 3.75673289999999982 2.00950739999999994 0.065610260000000004"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[31]" 
-		" -type \"float3\" 3.62273220000000018 2.00950739999999994 -0.19738173000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[32]" 
-		" -type \"float3\" 3.4140204999999999 2.00950739999999994 -0.40609336000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[33]" 
-		" -type \"float3\" 3.15102819999999983 2.00950739999999994 -0.54009443999999995"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[34]" 
-		" -type \"float3\" 2.85949950000000008 2.00950739999999994 -0.58626807000000003"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[35]" 
-		" -type \"float3\" 2.56797079999999989 2.00950739999999994 -0.54009437999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[36]" 
-		" -type \"float3\" 2.3049786000000001 2.00950739999999994 -0.40609329999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[37]" 
-		" -type \"float3\" 2.09626720000000022 2.00950739999999994 -0.19738168"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[38]" 
-		" -type \"float3\" 1.962266 2.00950739999999994 0.065610319"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[39]" 
-		" -type \"float3\" 1.91609239999999992 2.00950739999999994 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[40]" 
-		" -type \"float3\" 2.85949950000000008 1.121152 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pnts[41]" 
-		" -type \"float3\" 2.85949950000000008 2.00950739999999994 0.35713917000000001"
+		2 "|Asset5:Bookshelf2|Asset5:pCylinder3|Asset5:pCylinderShape3" "pt[0:41]" 
+		(" -s 42 -type \"float3\" 1.96226539999999994 1.121152 0.64866816999999999 2.09626650000000003 1.121152 0.91166024999999995 2.30497839999999998 1.121152 1.12037209999999998 2.56797049999999993 1.121152 1.25437310000000002 2.85949950000000008 1.121152 1.3005468 3.15102860000000007 1.121152 1.25437310000000002 3.4140204999999999 1.121152 1.12037180000000003 3.62273220000000018 1.121152 0.91166013000000001 3.75673289999999982 1.121152 0.64866805000000005 3.802907 1.121152 0.35713917000000001 3.75673289999999982 1.121152 0.065610260000000004 3.62273220000000018 1.121152 -0.19738173000000001 3.4140204999999999 1.121152 -0.40609336000000001 3.15102819999999983 1.121152 -0.54009443999999995 2.85949950000000008 1.121152 -0.58626807000000003 2.56797079999999989 1.121152 -0.54009437999999999 2.3049786000000001 1.121152 -0.40609329999999999 2.09626720000000022 1.121152 -0.19738168 1.962266 1.121152 0.065610319 1.91609239999999992 1.121152 0.35713917000000001 1.96226539999999994 2.00950739999999994 0.64866816999999999 2.0962"
+		+ "6650000000003 2.00950739999999994 0.91166024999999995 2.30497839999999998 2.00950739999999994 1.12037209999999998 2.56797049999999993 2.00950739999999994 1.25437310000000002 2.85949950000000008 2.00950739999999994 1.3005468 3.15102860000000007 2.00950739999999994 1.25437310000000002 3.4140204999999999 2.00950739999999994 1.12037180000000003 3.62273220000000018 2.00950739999999994 0.91166013000000001 3.75673289999999982 2.00950739999999994 0.64866805000000005 3.802907 2.00950739999999994 0.35713917000000001 3.75673289999999982 2.00950739999999994 0.065610260000000004 3.62273220000000018 2.00950739999999994 -0.19738173000000001 3.4140204999999999 2.00950739999999994 -0.40609336000000001 3.15102819999999983 2.00950739999999994 -0.54009443999999995 2.85949950000000008 2.00950739999999994 -0.58626807000000003 2.56797079999999989 2.00950739999999994 -0.54009437999999999 2.3049786000000001 2.00950739999999994 -0.40609329999999999 2.09626720000000022 2.00950739999999994 -0.19738168 1.962266 2.00950739999999994 0.0656"
+		+ "10319 1.91609239999999992 2.00950739999999994 0.35713917000000001 2.85949950000000008 1.121152 0.35713917000000001 2.85949950000000008 2.00950739999999994 0.35713917000000001"
+		)
 		2 "|Asset5:Bookshelf2|Asset5:pCube13" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCube13" "rotatePivot" " -type \"double3\" 4.02595109411462904 1.57256959445282773 -0.070335086509897962"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCube13" "scalePivot" " -type \"double3\" 4.02595109411462904 1.57256959445282773 -0.070335086509897962"
 		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts" " -s 89"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[0]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[1]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[2]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[3]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[4]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[5]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[6]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[7]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[8]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[9]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[10]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[11]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[12]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[13]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[14]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[15]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[16]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[17]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[18]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[19]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[20]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[21]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[22]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[23]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[24]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[25]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[26]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[27]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[28]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[29]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[30]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[31]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[32]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[33]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[34]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[35]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[36]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[37]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[38]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[39]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[40]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[41]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[42]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[43]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[44]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[45]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[46]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[47]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[48]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[49]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[50]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[51]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[52]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[53]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[54]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[55]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[56]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[57]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[58]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[59]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[60]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[61]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[62]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[63]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[64]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[65]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[66]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[67]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[68]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[69]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[70]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[71]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[72]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[73]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[74]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[75]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[76]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[77]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[78]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[79]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[80]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[81]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[82]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[83]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[84]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[85]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[86]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[87]" " -type \"float3\" 0 1.554377 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pnts[88]" " -type \"float3\" 0 1.554377 0"
-		
+		2 "|Asset5:Bookshelf2|Asset5:pCube13|Asset5:pCubeShape13" "pt[0:88]" (" -s 89 -type \"float3\" 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0"
+		+ " 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0 0 1.554377 0"
+		)
 		2 "|Asset5:Bookshelf2|Asset5:pCylinder4" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCylinder4" "rotatePivot" " -type \"double3\" 5.2133514985086773 1.56532978653989407 0.35713915749342712"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCylinder4" "scalePivot" " -type \"double3\" 5.2133514985086773 1.56532978653989407 0.35713915749342712"
 		
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts" " -s 42"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[0]" 
-		" -type \"float3\" 4.31611730000000016 1.121152 0.64866816999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[1]" 
-		" -type \"float3\" 4.45011850000000031 1.121152 0.91166024999999995"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[2]" 
-		" -type \"float3\" 4.65883059999999993 1.121152 1.12037209999999998"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[3]" 
-		" -type \"float3\" 4.92182250000000021 1.121152 1.25437310000000002"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[4]" 
-		" -type \"float3\" 5.21335169999999959 1.121152 1.3005468"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[5]" 
-		" -type \"float3\" 5.50488089999999985 1.121152 1.25437310000000002"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[6]" 
-		" -type \"float3\" 5.76787280000000013 1.121152 1.12037180000000003"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[7]" 
-		" -type \"float3\" 5.97658440000000013 1.121152 0.91166013000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[8]" 
-		" -type \"float3\" 6.11058520000000005 1.121152 0.64866805000000005"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[9]" 
-		" -type \"float3\" 6.15675930000000005 1.121152 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[10]" 
-		" -type \"float3\" 6.11058520000000005 1.121152 0.065610260000000004"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[11]" 
-		" -type \"float3\" 5.97658440000000013 1.121152 -0.19738173000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[12]" 
-		" -type \"float3\" 5.76787280000000013 1.121152 -0.40609336000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[13]" 
-		" -type \"float3\" 5.50488040000000023 1.121152 -0.54009443999999995"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[14]" 
-		" -type \"float3\" 5.21335169999999959 1.121152 -0.58626807000000003"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[15]" 
-		" -type \"float3\" 4.92182250000000021 1.121152 -0.54009437999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[16]" 
-		" -type \"float3\" 4.65883059999999993 1.121152 -0.40609329999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[17]" 
-		" -type \"float3\" 4.450119 1.121152 -0.19738168"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[18]" 
-		" -type \"float3\" 4.31611820000000002 1.121152 0.065610319"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[19]" 
-		" -type \"float3\" 4.26994469999999993 1.121152 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[20]" 
-		" -type \"float3\" 4.31611730000000016 2.00950739999999994 0.64866816999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[21]" 
-		" -type \"float3\" 4.45011850000000031 2.00950739999999994 0.91166024999999995"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[22]" 
-		" -type \"float3\" 4.65883059999999993 2.00950739999999994 1.12037209999999998"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[23]" 
-		" -type \"float3\" 4.92182250000000021 2.00950739999999994 1.25437310000000002"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[24]" 
-		" -type \"float3\" 5.21335169999999959 2.00950739999999994 1.3005468"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[25]" 
-		" -type \"float3\" 5.50488089999999985 2.00950739999999994 1.25437310000000002"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[26]" 
-		" -type \"float3\" 5.76787280000000013 2.00950739999999994 1.12037180000000003"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[27]" 
-		" -type \"float3\" 5.97658440000000013 2.00950739999999994 0.91166013000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[28]" 
-		" -type \"float3\" 6.11058520000000005 2.00950739999999994 0.64866805000000005"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[29]" 
-		" -type \"float3\" 6.15675930000000005 2.00950739999999994 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[30]" 
-		" -type \"float3\" 6.11058520000000005 2.00950739999999994 0.065610260000000004"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[31]" 
-		" -type \"float3\" 5.97658440000000013 2.00950739999999994 -0.19738173000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[32]" 
-		" -type \"float3\" 5.76787280000000013 2.00950739999999994 -0.40609336000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[33]" 
-		" -type \"float3\" 5.50488040000000023 2.00950739999999994 -0.54009443999999995"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[34]" 
-		" -type \"float3\" 5.21335169999999959 2.00950739999999994 -0.58626807000000003"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[35]" 
-		" -type \"float3\" 4.92182250000000021 2.00950739999999994 -0.54009437999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[36]" 
-		" -type \"float3\" 4.65883059999999993 2.00950739999999994 -0.40609329999999999"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[37]" 
-		" -type \"float3\" 4.450119 2.00950739999999994 -0.19738168"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[38]" 
-		" -type \"float3\" 4.31611820000000002 2.00950739999999994 0.065610319"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[39]" 
-		" -type \"float3\" 4.26994469999999993 2.00950739999999994 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[40]" 
-		" -type \"float3\" 5.21335169999999959 1.121152 0.35713917000000001"
-		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pnts[41]" 
-		" -type \"float3\" 5.21335169999999959 2.00950739999999994 0.35713917000000001"
+		2 "|Asset5:Bookshelf2|Asset5:pCylinder4|Asset5:pCylinderShape4" "pt[0:41]" 
+		(" -s 42 -type \"float3\" 4.31611730000000016 1.121152 0.64866816999999999 4.45011850000000031 1.121152 0.91166024999999995 4.65883059999999993 1.121152 1.12037209999999998 4.92182250000000021 1.121152 1.25437310000000002 5.21335169999999959 1.121152 1.3005468 5.50488089999999985 1.121152 1.25437310000000002 5.76787280000000013 1.121152 1.12037180000000003 5.97658440000000013 1.121152 0.91166013000000001 6.11058520000000005 1.121152 0.64866805000000005 6.15675930000000005 1.121152 0.35713917000000001 6.11058520000000005 1.121152 0.065610260000000004 5.97658440000000013 1.121152 -0.19738173000000001 5.76787280000000013 1.121152 -0.40609336000000001 5.50488040000000023 1.121152 -0.54009443999999995 5.21335169999999959 1.121152 -0.58626807000000003 4.92182250000000021 1.121152 -0.54009437999999999 4.65883059999999993 1.121152 -0.40609329999999999 4.450119 1.121152 -0.19738168 4.31611820000000002 1.121152 0.065610319 4.26994469999999993 1.121152 0.35713917000000001 4.31611730000000016 2.00950739999999994 0.6486681699"
+		+ "9999999 4.45011850000000031 2.00950739999999994 0.91166024999999995 4.65883059999999993 2.00950739999999994 1.12037209999999998 4.92182250000000021 2.00950739999999994 1.25437310000000002 5.21335169999999959 2.00950739999999994 1.3005468 5.50488089999999985 2.00950739999999994 1.25437310000000002 5.76787280000000013 2.00950739999999994 1.12037180000000003 5.97658440000000013 2.00950739999999994 0.91166013000000001 6.11058520000000005 2.00950739999999994 0.64866805000000005 6.15675930000000005 2.00950739999999994 0.35713917000000001 6.11058520000000005 2.00950739999999994 0.065610260000000004 5.97658440000000013 2.00950739999999994 -0.19738173000000001 5.76787280000000013 2.00950739999999994 -0.40609336000000001 5.50488040000000023 2.00950739999999994 -0.54009443999999995 5.21335169999999959 2.00950739999999994 -0.58626807000000003 4.92182250000000021 2.00950739999999994 -0.54009437999999999 4.65883059999999993 2.00950739999999994 -0.40609329999999999 4.450119 2.00950739999999994 -0.19738168 4.3161182000000000"
+		+ "2 2.00950739999999994 0.065610319 4.26994469999999993 2.00950739999999994 0.35713917000000001 5.21335169999999959 1.121152 0.35713917000000001 5.21335169999999959 2.00950739999999994 0.35713917000000001"
+		)
 		2 "|Asset5:Bookshelf2|Asset5:pCube12" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCube12" "rotatePivot" " -type \"double3\" 4.02595109411462904 0.8178260227949733 -0.070335086509897962"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCube12" "scalePivot" " -type \"double3\" 4.02595109411462904 0.8178260227949733 -0.070335086509897962"
 		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts" " -s 89"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[0]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[1]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[2]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[3]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[4]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[5]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[6]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[7]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[8]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[9]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[10]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[11]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[12]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[13]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[14]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[15]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[16]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[17]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[18]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[19]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[20]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[21]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[22]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[23]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[24]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[25]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[26]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[27]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[28]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[29]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[30]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[31]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[32]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[33]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[34]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[35]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[36]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[37]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[38]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[39]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[40]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[41]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[42]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[43]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[44]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[45]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[46]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[47]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[48]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[49]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[50]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[51]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[52]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[53]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[54]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[55]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[56]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[57]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[58]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[59]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[60]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[61]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[62]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[63]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[64]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[65]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[66]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[67]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[68]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[69]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[70]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[71]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[72]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[73]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[74]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[75]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[76]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[77]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[78]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[79]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[80]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[81]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[82]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[83]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[84]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[85]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[86]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[87]" " -type \"float3\" 0 0.79963331999999998 0"
-		
-		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pnts[88]" " -type \"float3\" 0 0.79963331999999998 0"
-		
+		2 "|Asset5:Bookshelf2|Asset5:pCube12|Asset5:pCubeShape12" "pt[0:88]" (" -s 89 -type \"float3\" 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999"
+		+ "998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.799633"
+		+ "31999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0 0 0.79963331999999998 0"
+		)
 		2 "|Asset5:Bookshelf2|Asset5:pCube15" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|Asset5:Bookshelf2|Asset5:pCube15" "scale" " -type \"double3\" 1 1 1"
@@ -83644,9 +82836,9 @@ createNode reference -n "Asset5RN";
 		" -type \"string\" \"map1\""
 		3 "Asset5:polyTweakUV9.output" "|Asset5:Bookshelf2|Asset5:pCube15|Asset5:pCubeShape15.inMesh" 
 		""
-		3 ":standardSurface1.message" "Asset5:materialInfo2.texture" "-na"
 		3 "Asset5:polyTweakUV10.output" "|Asset5:Bookshelf2|Asset5:pCube11|Asset5:pCubeShape11.inMesh" 
 		""
+		3 ":standardSurface1.message" "Asset5:materialInfo2.texture" "-na"
 		5 4 "Asset5RN" "|Asset5:Bookshelf2|Asset5:pCube11|Asset5:pCubeShape11.inMesh" 
 		"Asset5RN.placeHolderList[1]" ""
 		5 4 "Asset5RN" "|Asset5:Bookshelf2|Asset5:pCube15|Asset5:pCubeShape15.inMesh" 
@@ -84123,6 +83315,130 @@ createNode transformGeometry -n "transformGeometry18";
 	rename -uid "FCC7017A-4511-D9AA-9E06-0082506B4A04";
 	setAttr ".txf" -type "matrix" 0.2178169027956747 0 0 0 0 0.11231297418268067 0 0
 		 0 0 0.2178169027956747 0 0 2.0124285218676592 3.8031783547873204 1;
+createNode polyMapDel -n "polyMapDel1";
+	rename -uid "31A8BD09-4F7B-8789-6602-FFA0B8C7B9FE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+createNode polyMapDel -n "polyMapDel2";
+	rename -uid "B9B89411-4351-4725-93C3-048ECDFB7DEF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+createNode polyMapDel -n "polyMapDel3";
+	rename -uid "3CDCDB92-483E-64E8-5214-34B81A73ABA6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+createNode polyAutoProj -n "polyAutoProj1";
+	rename -uid "28D5361A-4E07-18A7-A7A4-E4B0D9D04081";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 0.72029830139266493 0 0 0 -7.5326760774367223 1;
+	setAttr ".s" -type "double3" 94.752113342285156 94.752113342285156 94.752113342285156 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSewMove -n "polyMapSewMove1";
+	rename -uid "5DC34F48-4F19-6F72-9870-68B0B14CFF7D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+createNode polyMapSewMove -n "polyMapSewMove2";
+	rename -uid "EDC31E95-42A9-ECD8-52B2-EF926C02D5D8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[7]";
+createNode polyMapSewMove -n "polyMapSewMove3";
+	rename -uid "540ED26F-4438-7CAE-6564-DE9BCB27D094";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[2]";
+createNode polyMapSewMove -n "polyMapSewMove4";
+	rename -uid "561E154D-430E-D9B1-79BC-BBBBA9DD0B3C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[3]";
+createNode polyMapSewMove -n "polyMapSewMove5";
+	rename -uid "386A6A07-4359-9B0A-2DF6-799AB284AE7B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+createNode polyTweakUV -n "polyTweakUV1";
+	rename -uid "4C735368-46FF-D202-B73A-82B152125802";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.07187216 0.073307931 -0.071182907
+		 0.073295355 -0.070083663 0.00088387728 -0.070772722 0.00089633465 0.070758402 -0.00168401
+		 0.070069313 -0.0016714334 0.068970263 0.070740074 0.069659412 0.070727557 0.07008183
+		 -0.00098234415 0.071181118 -0.073393703 -0.068971977 -0.070838571 -0.070071131 0.0015730858
+		 0.071193635 -0.072704673 -0.0689594 -0.070149422;
+createNode polyAutoProj -n "polyAutoProj2";
+	rename -uid "7A233FA8-4E31-A64A-C94F-75BF25D7EB9C";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 0.72029830139266493 0 0 0 -7.5326760774367223 1;
+	setAttr ".s" -type "double3" 49.825472295284271 49.825472295284271 49.825472295284271 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSewMove -n "polyMapSewMove6";
+	rename -uid "C4395375-462E-52FE-3823-81B90E798A7A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[7]";
+createNode polyMapSewMove -n "polyMapSewMove7";
+	rename -uid "1330EAB4-4AD2-964C-7E11-5AB49414F6E6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+createNode polyMapSewMove -n "polyMapSewMove8";
+	rename -uid "035C736C-4FC1-7DD1-80A0-1F8788495AE5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+createNode polyMapSewMove -n "polyMapSewMove9";
+	rename -uid "1D9B7F4D-4FAF-BE69-5F2F-8AA34040E45B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1]";
+createNode polyMapSewMove -n "polyMapSewMove10";
+	rename -uid "B2F97DD7-4A85-0BD7-4465-67B14DA3C1A2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[2]";
+createNode polyAutoProj -n "polyAutoProj3";
+	rename -uid "D042FBC1-40E7-664E-5107-438EE24EBBF8";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 96.185699462890625 96.185699462890625 96.185699462890625 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyMapSewMove -n "polyMapSewMove11";
+	rename -uid "BD2314CC-4880-D846-95E6-CAAAAF1A89E3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1]";
+createNode polyMapSewMove -n "polyMapSewMove12";
+	rename -uid "46E0C074-4666-5EA4-EF96-7DAA0571E351";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[2]";
+createNode polyMapSewMove -n "polyMapSewMove13";
+	rename -uid "07F69F52-4A9A-6891-8270-E49AF68C8782";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[7]";
+createNode polyMapSewMove -n "polyMapSewMove14";
+	rename -uid "420BBC9C-46E8-C926-0F5D-1E99096787B6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[11]";
+createNode polyMapSewMove -n "polyMapSewMove15";
+	rename -uid "7BDF79A8-408A-45F7-3643-0D9D43A5F35F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+createNode polyTweakUV -n "polyTweakUV2";
+	rename -uid "18851962-45A9-D10B-D24A-ECBE299823AA";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 2.3841858e-07 2.682209e-07
+		 2.0861626e-07 2.1897722e-07 2.2468157e-07 -5.5297278e-08 2.0535663e-07 -5.6810677e-08
+		 -2.3841858e-07 1.7881393e-07 -2.3841858e-07 1.1920929e-07 -2.6985072e-07 0 -2.30968e-07
+		 5.9604645e-08 2.1769665e-07 -4.6100467e-08 -1.6624108e-07 5.9604645e-08 -1.7881393e-07
+		 -5.9604645e-08 -1.4901161e-07 -5.9604645e-08 2.0861626e-07 -2.6309863e-07 1.7881393e-07
+		 -2.378365e-07;
+createNode polyTweakUV -n "polyTweakUV3";
+	rename -uid "2B0042FC-422A-B610-65D5-D2975DA096E3";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.023334755 -0.040217489
+		 -0.023336833 0.040218912 0.058722138 0.040216424 0.058724105 -0.040219992 -0.024104085
+		 0.040218934 -0.024101974 -0.040217489 -0.10616097 -0.040214926 -0.10616305 0.040221479
+		 0.059491336 -0.040219992 0.059489369 0.040216401 -0.023334745 -0.039450258 0.058724195
+		 -0.039452851 -0.023336878 0.039451659 0.058722109 0.039449178;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -84152,7 +83468,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 9 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -84174,8 +83490,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Asset1RN.phl[1]" "Asset1RN.phl[2]";
 connectAttr "Asset1RN.phl[3]" "Asset1RN.phl[4]";
 connectAttr "Asset1RN.phl[5]" "Asset1RN.phl[6]";
@@ -84416,6 +83730,12 @@ connectAttr "pasted__pCubeShape222.iog" "Asset5RN.phl[209]";
 connectAttr "Asset1RN.phl[12]" "Asset5RN.phl[210]";
 connectAttr "Asset5RN.phl[211]" "transformGeometry13.ig";
 connectAttr "Asset5RN.phl[212]" "transformGeometry10.ig";
+connectAttr "polyTweakUV1.out" "pCubeShape1.i";
+connectAttr "polyTweakUV1.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
+connectAttr "polyTweakUV3.out" "pCubeShape2.i";
+connectAttr "polyTweakUV3.uvtk[0]" "pCubeShape2.uvst[0].uvtw";
+connectAttr "polyTweakUV2.out" "pCubeShape3.i";
+connectAttr "polyTweakUV2.uvtk[0]" "pCubeShape3.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "standardSurface2SG.message" ":defaultLightSet.message";
@@ -84434,13 +83754,37 @@ connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "standardSurface2.oc" "standardSurface2SG.ss";
 connectAttr "standardSurface2SG.msg" "materialInfo1.sg";
 connectAttr "standardSurface2.msg" "materialInfo1.m";
+connectAttr "polySurfaceShape3.o" "polyMapDel1.ip";
+connectAttr "polySurfaceShape4.o" "polyMapDel2.ip";
+connectAttr "polySurfaceShape5.o" "polyMapDel3.ip";
+connectAttr "polyMapDel1.out" "polyAutoProj1.ip";
+connectAttr "pCubeShape1.wm" "polyAutoProj1.mp";
+connectAttr "polyAutoProj1.out" "polyMapSewMove1.ip";
+connectAttr "polyMapSewMove1.out" "polyMapSewMove2.ip";
+connectAttr "polyMapSewMove2.out" "polyMapSewMove3.ip";
+connectAttr "polyMapSewMove3.out" "polyMapSewMove4.ip";
+connectAttr "polyMapSewMove4.out" "polyMapSewMove5.ip";
+connectAttr "polyMapSewMove5.out" "polyTweakUV1.ip";
+connectAttr "polyMapDel3.out" "polyAutoProj2.ip";
+connectAttr "pCubeShape2.wm" "polyAutoProj2.mp";
+connectAttr "polyAutoProj2.out" "polyMapSewMove6.ip";
+connectAttr "polyMapSewMove6.out" "polyMapSewMove7.ip";
+connectAttr "polyMapSewMove7.out" "polyMapSewMove8.ip";
+connectAttr "polyMapSewMove8.out" "polyMapSewMove9.ip";
+connectAttr "polyMapSewMove9.out" "polyMapSewMove10.ip";
+connectAttr "polyMapDel2.out" "polyAutoProj3.ip";
+connectAttr "pCubeShape3.wm" "polyAutoProj3.mp";
+connectAttr "polyAutoProj3.out" "polyMapSewMove11.ip";
+connectAttr "polyMapSewMove11.out" "polyMapSewMove12.ip";
+connectAttr "polyMapSewMove12.out" "polyMapSewMove13.ip";
+connectAttr "polyMapSewMove13.out" "polyMapSewMove14.ip";
+connectAttr "polyMapSewMove14.out" "polyMapSewMove15.ip";
+connectAttr "polyMapSewMove15.out" "polyTweakUV2.ip";
+connectAttr "polyMapSewMove10.out" "polyTweakUV3.ip";
 connectAttr "standardSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
 // End of Scene2_Main_MC.ma

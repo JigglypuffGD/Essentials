@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_Main_MC.ma
-//Last modified: Fri, Dec 12, 2025 10:15:45 AM
+//Last modified: Fri, Dec 12, 2025 10:18:30 AM
 //Codeset: 1252
 file -rdi 1 -ns "Asset1" -rfn "Asset1RN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Asset1.ma";
 file -rdi 1 -ns "Asset2" -rfn "Asset2RN" -op "v=0;" -typ "mayaAscii" "C:/Users/elect/Desktop/GitHubEssintials/Essentials/DAGV1100and1200/Maya//scenes/Asset2.ma";
@@ -19,19 +19,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "1FCB7967-475D-C63C-94BC-BA8572C76A9A";
+fileInfo "UUID" "8FEEDBB5-45E3-C4BE-14D6-44A086AAEFD2";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "1959677E-4857-D77E-13E2-A688338A226A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 154.7094953712629 79.944141751510045 92.649237151340657 ;
+	setAttr ".t" -type "double3" 154.70949537124244 79.944141751497199 92.649237151320307 ;
 	setAttr ".r" -type "double3" -24.000000000000242 45.199999999999584 -2.2568835265802792e-15 ;
 	setAttr ".rpt" -type "double3" -5.7724082617883498e-15 -1.23841102188632e-15 1.2568549656049248e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1D1745AF-4ADF-1DE1-8875-73A5320A559B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 170.9677815771721;
+	setAttr ".coi" 170.9677815771405;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82544,7 +82544,7 @@ createNode reference -n "Asset3RN";
 lockNode -l 1 ;
 createNode reference -n "Asset5RN";
 	rename -uid "1FBFD525-4C75-8F47-C2CC-89AB4B0A1FFA";
-	setAttr -s 212 ".phl";
+	setAttr -s 215 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -82757,10 +82757,13 @@ createNode reference -n "Asset5RN";
 	setAttr ".phl[210]" 0;
 	setAttr ".phl[211]" 0;
 	setAttr ".phl[212]" 0;
+	setAttr ".phl[213]" 0;
+	setAttr ".phl[214]" 0;
+	setAttr ".phl[215]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Asset5RN"
 		"Asset5RN" 0
-		"Asset5RN" 247
+		"Asset5RN" 250
 		2 "|Asset5:Bookshelf2" "visibility" " 1"
 		2 "|Asset5:Bookshelf2" "translate" " -type \"double3\" -33.90229921293099835 0.047600180854285093 -22.32472213293715058"
 		
@@ -83257,11 +83260,17 @@ createNode reference -n "Asset5RN";
 		""
 		5 4 "Asset5RN" "Asset5:standardSurface1SG.dagSetMembers" "Asset5RN.placeHolderList[209]" 
 		""
-		5 2 "Asset5RN" "Asset5:materialInfo2.texture" "Asset5RN.placeHolderList[210]" 
+		5 4 "Asset5RN" "Asset5:standardSurface1SG.dagSetMembers" "Asset5RN.placeHolderList[210]" 
 		""
-		5 3 "Asset5RN" "Asset5:polyTweakUV9.output" "Asset5RN.placeHolderList[211]" 
+		5 4 "Asset5RN" "Asset5:standardSurface1SG.dagSetMembers" "Asset5RN.placeHolderList[211]" 
+		""
+		5 4 "Asset5RN" "Asset5:standardSurface1SG.dagSetMembers" "Asset5RN.placeHolderList[212]" 
+		""
+		5 2 "Asset5RN" "Asset5:materialInfo2.texture" "Asset5RN.placeHolderList[213]" 
+		""
+		5 3 "Asset5RN" "Asset5:polyTweakUV9.output" "Asset5RN.placeHolderList[214]" 
 		"Asset5:pCubeShape15.i"
-		5 3 "Asset5RN" "Asset5:polyTweakUV10.output" "Asset5RN.placeHolderList[212]" 
+		5 3 "Asset5RN" "Asset5:polyTweakUV10.output" "Asset5RN.placeHolderList[215]" 
 		"Asset5:pCubeShape11.i";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -83468,7 +83477,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 6 ".dsm";
+	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -83727,9 +83736,12 @@ connectAttr "pasted__pCubeShape219.iog" "Asset5RN.phl[206]";
 connectAttr "pasted__pCubeShape220.iog" "Asset5RN.phl[207]";
 connectAttr "pasted__pCubeShape221.iog" "Asset5RN.phl[208]";
 connectAttr "pasted__pCubeShape222.iog" "Asset5RN.phl[209]";
-connectAttr "Asset1RN.phl[12]" "Asset5RN.phl[210]";
-connectAttr "Asset5RN.phl[211]" "transformGeometry13.ig";
-connectAttr "Asset5RN.phl[212]" "transformGeometry10.ig";
+connectAttr "pCubeShape3.iog" "Asset5RN.phl[210]";
+connectAttr "pCubeShape2.iog" "Asset5RN.phl[211]";
+connectAttr "pCubeShape1.iog" "Asset5RN.phl[212]";
+connectAttr "Asset1RN.phl[12]" "Asset5RN.phl[213]";
+connectAttr "Asset5RN.phl[214]" "transformGeometry13.ig";
+connectAttr "Asset5RN.phl[215]" "transformGeometry10.ig";
 connectAttr "polyTweakUV1.out" "pCubeShape1.i";
 connectAttr "polyTweakUV1.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
 connectAttr "polyTweakUV3.out" "pCubeShape2.i";
@@ -83784,7 +83796,4 @@ connectAttr "polyMapSewMove10.out" "polyTweakUV3.ip";
 connectAttr "standardSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
 // End of Scene2_Main_MC.ma
